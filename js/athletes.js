@@ -35,6 +35,13 @@ document.addEventListener('DOMContentLoaded', () => {
       console.error('Failed to load roster data:', err);
     });
 
+  // Helper: check if athlete has positive tournament earnings
+  function hasValidPurse(athlete) {
+    if (!athlete || !athlete.earnings) return false;
+    const num = parseInt(athlete.earnings.replace(/[^0-9]/g, ''), 10);
+    return !isNaN(num) && num > 0;
+  }
+
   // 2. Render Cards in Full Directory Grid
   function renderGrid(list) {
     if (!grid) return;
@@ -65,12 +72,13 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="athlete-card-meta">${athlete.role}</div>
           </div>
           
+          ${hasValidPurse(athlete) ? `
           <div class="athlete-card-earnings">
             <span style="color: var(--color--grey-on-track);">PURSE</span>
             <span class="athlete-card-earnings-val">${athlete.earnings}</span>
-          </div>
+          </div>` : ''}
 
-          <button class="btn-ln btn-ln-secondary" style="width: 100%; padding: 0.65rem 1rem; font-size: 0.78rem;" onclick="openAthleteModal('${athlete.slug}')">
+          <button class="btn-ln btn-ln-secondary" style="width: 100%; margin-top: auto; padding: 0.65rem 1rem; font-size: 0.78rem;" onclick="openAthleteModal('${athlete.slug}')">
             <span>DOSSIER & SOCIALS →</span>
           </button>
         </div>
@@ -238,7 +246,16 @@ document.addEventListener('DOMContentLoaded', () => {
     modalName.textContent = athlete.name;
     modalRole.textContent = `${athlete.region} // ${athlete.role.toUpperCase()}`;
     modalBadge.textContent = athlete.division.toUpperCase();
-    modalEarnings.textContent = athlete.earnings;
+
+    const earningsBox = document.getElementById('modalEarningsBox');
+    if (hasValidPurse(athlete)) {
+      if (modalEarnings) modalEarnings.textContent = athlete.earnings;
+      if (earningsBox) earningsBox.style.display = 'flex';
+    } else {
+      if (modalEarnings) modalEarnings.textContent = '';
+      if (earningsBox) earningsBox.style.display = 'none';
+    }
+
     modalBio.textContent = athlete.bio || 'Representing Club 7VEN on the global esports and entertainment stage.';
 
     // Social Links
