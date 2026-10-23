@@ -1,0 +1,489 @@
+/* ==========================================================================
+   7VEN CLUB — ADAPTIVE DEVICE & MOBILE PERFORMANCE SYSTEM
+   Engineered for memory-constrained mobile devices & high-performance desktops
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. LOW-RAM & MOBILE COMPOSITING OPTIMIZATIONS
+   Reduces GPU texture allocations, framebuffers, and memory footprint
+   -------------------------------------------------------------------------- */
+
+[data-device-tier="low"],
+@media (max-width: 860px) {
+  /* Eliminate expensive multi-pass backdrop-filter blurs that crash mobile RAM */
+  .ln-nav,
+  .athlete-modal-overlay,
+  .cart-drawer-overlay,
+  .vault-modal-overlay,
+  .hero-telemetry-bar,
+  .hud-toast,
+  .mobile-drawer {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  .ln-nav {
+    background: rgba(12, 14, 10, 0.96) !important;
+  }
+
+  .ln-nav.scrolled {
+    background: #0b0e09 !important;
+  }
+
+  .athlete-modal-overlay,
+  .vault-modal-overlay,
+  .cart-drawer-overlay {
+    background: rgba(5, 7, 4, 0.94) !important;
+  }
+
+  /* De-allocate permanent GPU compositing layers when idle */
+  .fan-card,
+  .athlete-card,
+  .vault-card,
+  .product-card {
+    will-change: auto !important;
+  }
+
+  .fan-card:active,
+  .fan-card.is-hovered {
+    will-change: transform !important;
+  }
+
+  /* Tone down large spread blurred shadows to conserve GPU memory */
+  .fan-card,
+  .athlete-card,
+  .vault-card,
+  .product-card {
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.6) !important;
+  }
+
+  /* Simplify ambient glow filters */
+  .ambient-glow-top {
+    display: none !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. MOBILE HEADER & NAVIGATION REFINEMENTS
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 860px) {
+  .ln-nav-links {
+    display: none !important;
+  }
+
+  .mobile-menu-btn {
+    display: flex !important;
+    cursor: pointer;
+  }
+
+  .ln-brand-badge {
+    display: none !important;
+  }
+}
+
+@media (max-width: 580px) {
+  .ln-nav-inner {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    gap: 0.75rem;
+  }
+
+  .ln-brand-logo {
+    height: 30px !important;
+  }
+
+  .ln-brand-title {
+    font-size: 1.35rem !important;
+  }
+
+  /* Hide textual status in SFX button on small mobile, keep active wave icon */
+  .sound-status-text {
+    display: none !important;
+  }
+
+  .sound-toggle-btn {
+    padding: 0.45rem 0.65rem !important;
+    min-width: 36px;
+  }
+
+  /* Hide header Join button on tiny screens to prevent collision */
+  #navCtaBtn {
+    display: none !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. MOBILE NAVIGATION DRAWER
+   Smooth, lightweight slide-out navigation
+   -------------------------------------------------------------------------- */
+
+.mobile-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 3000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobile-drawer-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: -360px;
+  width: 100%;
+  max-width: min(340px, 86vw);
+  height: 100vh;
+  background: #0d100b;
+  border-left: 1px solid var(--color--lime-border);
+  z-index: 3001;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.75rem 1.5rem;
+  box-shadow: -20px 0 60px rgba(0, 0, 0, 0.95);
+  transition: right 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mobile-drawer-overlay.open .mobile-drawer {
+  right: 0;
+}
+
+.mobile-drawer-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-drawer-close {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--color--lime-border);
+  color: var(--color--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  background: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  transition: all var(--duration-fast) ease;
+}
+
+.mobile-drawer-close:hover {
+  background: var(--color--lime);
+  color: var(--color--black);
+}
+
+.mobile-drawer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 2rem 0;
+}
+
+.mobile-nav-link {
+  font-family: var(--font-condensed);
+  font-size: 1.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color--white);
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: color var(--duration-fast) ease, padding-left var(--duration-fast) ease;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.active {
+  color: var(--color--lime);
+  padding-left: 0.5rem;
+}
+
+.mobile-drawer-footer {
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mobile-drawer-telemetry {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color--grey-on-track);
+}
+
+/* --------------------------------------------------------------------------
+   4. FAN-OUT CARD DECK — MOBILE HORIZONTAL SWIPE CAROUSEL
+   Transformed into a native-feeling touch carousel on mobile & tablet
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 860px) {
+  .fan-deck-section {
+    padding: 2.5rem 0 4.5rem 0;
+  }
+
+  .fan-deck-header {
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .fan-deck-header h1,
+  .fan-deck-header h2 {
+    font-size: clamp(2.4rem, 9vw, 4.2rem) !important;
+  }
+
+  .fan-deck-header .text-lead {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  /* Touch hint indicator */
+  .mobile-touch-hint {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    color: var(--color--lime);
+    margin: 1rem auto 0 auto;
+    text-transform: uppercase;
+  }
+
+  .mobile-touch-hint-arrow {
+    animation: swipePulse 1.8s infinite ease-in-out;
+  }
+
+  @keyframes swipePulse {
+    0%, 100% { transform: translateX(0); opacity: 0.6; }
+    50% { transform: translateX(4px); opacity: 1; }
+  }
+
+  /* Carousel Deck Wrapper */
+  .fan-deck-wrapper {
+    height: auto !important;
+    min-height: 410px;
+    perspective: none !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    padding: 1rem 1.25rem 2rem 1.25rem !important;
+    gap: 1.25rem !important;
+  }
+
+  .fan-deck-wrapper::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  /* Mobile Individual Card */
+  .fan-card {
+    position: relative !important;
+    transform: none !important;
+    flex: 0 0 240px !important;
+    width: 240px !important;
+    height: 370px !important;
+    scroll-snap-align: center !important;
+    margin: 0 !important;
+    border-radius: 28px !important;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7) !important;
+  }
+
+  .fan-card-content {
+    transform: none !important;
+    padding: 1.25rem !important;
+  }
+
+  .fan-card-name {
+    font-size: 1.5rem !important;
+  }
+
+  .fan-card-hint {
+    opacity: 1 !important;
+    transform: none !important;
+    font-size: 0.68rem !important;
+  }
+
+  /* Touch active highlight */
+  .fan-card:active {
+    border-color: var(--color--lime) !important;
+    transform: scale(0.98) !important;
+  }
+}
+
+.mobile-touch-hint {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
+   5. ATHLETE DOSSIER MODAL — MOBILE OPTIMIZATION
+   Full-screen scrollable layout with touch-friendly controls
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 860px) {
+  .athlete-modal-overlay {
+    padding: 0.75rem !important;
+    align-items: flex-start !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .athlete-modal-card {
+    grid-template-columns: 1fr !important;
+    max-height: none !important;
+    margin: 1.5rem auto 3rem auto !important;
+    border-radius: var(--radius-sm) !important;
+  }
+
+  .athlete-modal-media {
+    min-height: 220px !important;
+    max-height: 270px !important;
+  }
+
+  .athlete-modal-info {
+    padding: 1.5rem 1.25rem !important;
+    gap: 1.25rem !important;
+  }
+
+  .athlete-modal-name {
+    font-size: 2.2rem !important;
+  }
+
+  .athlete-modal-bio {
+    font-size: 0.88rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .athlete-modal-earnings-box {
+    padding: 0.85rem 1rem !important;
+  }
+
+  .athlete-modal-close {
+    top: 0.85rem !important;
+    right: 0.85rem !important;
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 1rem !important;
+  }
+
+  .athlete-social-btn {
+    padding: 0.45rem 0.85rem !important;
+    font-size: 0.7rem !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   6. ATHLETE DIRECTORY GRID — MOBILE TUNING
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 860px) {
+  .roster-directory-section {
+    padding: 3rem 0 6rem 0;
+  }
+
+  .directory-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .search-box-wrap {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  /* Fix iOS auto-zoom by keeping font-size >= 16px */
+  .search-input {
+    font-size: 1rem !important;
+    padding: 0.85rem 1rem 0.85rem 2.8rem !important;
+  }
+
+  .roster-filter-group {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .roster-filter-group::-webkit-scrollbar {
+    display: none;
+  }
+
+  .roster-filter-btn {
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    padding: 0.5rem 1rem !important;
+    font-size: 0.72rem !important;
+  }
+
+  .athletes-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)) !important;
+    gap: 1.25rem !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .athletes-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .athlete-card {
+    border-radius: 24px !important;
+  }
+
+  .athlete-card-media {
+    height: 280px !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   7. VAULT MODAL & CART DRAWER ON SMALL MOBILE
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 600px) {
+  .cart-drawer {
+    max-width: 100% !important;
+    right: -100% !important;
+  }
+
+  .cart-drawer-overlay.open .cart-drawer {
+    right: 0 !important;
+  }
+
+  .vault-modal-card {
+    grid-template-columns: 1fr !important;
+    margin: 1.5rem auto !important;
+    max-height: none !important;
+  }
+
+  .vault-modal-overlay {
+    align-items: flex-start !important;
+    overflow-y: auto !important;
+  }
+
+  .hero-meta-strip {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}

@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/athletes.css">
+  <link rel="stylesheet" href="css/adaptive.css">
 </head>
 <body data-mode="on-stage">
 
@@ -106,9 +107,12 @@
   <main>
     <section class="hero-section" id="hero">
       
-      <!-- Video / Animated Stage Background Backdrop -->
+      <!-- Hardware-Accelerated Video / Adaptive Poster Backdrop -->
       <div class="hero-bg-container" aria-hidden="true">
-        <img src="assets/images/stage-gif.gif" alt="7VEN Tournament Stage Background" class="hero-stage-media">
+        <video id="heroStageVideo" class="hero-stage-media" autoplay loop muted playsinline poster="assets/images/stage-poster.jpg" preload="metadata">
+          <source src="assets/images/stage-video.mp4" type="video/mp4">
+        </video>
+        <img id="heroStagePoster" src="assets/images/stage-poster.jpg" alt="7VEN Tournament Stage Background" class="hero-stage-media" style="display: none;" loading="eager" decoding="async">
         <div class="hero-vignette"></div>
       </div>
 
@@ -345,6 +349,11 @@
           <p class="text-lead" style="max-width: 680px; margin: 1rem auto 0 auto;">
             Hover to expand among the deck. Click any card to open their complete operational dossier, tournament earnings, and verified social channels.
           </p>
+          <div class="mobile-touch-hint">
+            <span>SWIPE ROSTER</span>
+            <span class="mobile-touch-hint-arrow">➔</span>
+            <span>TAP CARD FOR DOSSIER</span>
+          </div>
         </div>
 
         <!-- Overlapping Fan-Out Card Deck -->
@@ -353,7 +362,7 @@
           <!-- Card 0: 7VEN Avivv -->
           <div class="fan-card" data-index="0" data-athlete-slug="avivv">
             <div class="fan-card-img-wrap">
-              <img src="assets/images/roster/avivv.jpg" alt="7VEN Avivv" class="fan-card-img">
+              <img src="assets/images/roster/avivv.jpg" alt="7VEN Avivv" class="fan-card-img" loading="lazy" decoding="async">
               <div class="fan-card-vignette"></div>
             </div>
             <span class="badge-pill is-live fan-card-badge">FNCS PRO</span>
@@ -368,7 +377,7 @@
           <!-- Card 1: 7VEN Tyler Zuber (MLB PRO, No purse) -->
           <div class="fan-card" data-index="1" data-athlete-slug="tyler-zuber">
             <div class="fan-card-img-wrap">
-              <img src="assets/images/roster/tyler-zuber.jpg" alt="7VEN Tyler Zuber" class="fan-card-img">
+              <img src="assets/images/roster/tyler-zuber.jpg" alt="7VEN Tyler Zuber" class="fan-card-img" loading="lazy" decoding="async">
               <div class="fan-card-vignette"></div>
             </div>
             <span class="badge-pill fan-card-badge">MLB PRO</span>
@@ -382,7 +391,7 @@
           <!-- Card 2: 7VEN GMONEY -->
           <div class="fan-card" data-index="2" data-athlete-slug="gmoney">
             <div class="fan-card-img-wrap">
-              <img src="assets/images/roster/gmoney.jpg" alt="7VEN GMONEY" class="fan-card-img">
+              <img src="assets/images/roster/gmoney.jpg" alt="7VEN GMONEY" class="fan-card-img" loading="lazy" decoding="async">
               <div class="fan-card-vignette"></div>
             </div>
             <span class="badge-pill is-live fan-card-badge">FNCS PRO</span>
@@ -397,7 +406,7 @@
           <!-- Card 3: 7VEN CRINGE (Center) -->
           <div class="fan-card" data-index="3" data-athlete-slug="cringe">
             <div class="fan-card-img-wrap">
-              <img src="assets/images/roster/cringe.jpg" alt="7VEN CRINGE" class="fan-card-img">
+              <img src="assets/images/roster/cringe.jpg" alt="7VEN CRINGE" class="fan-card-img" loading="lazy" decoding="async">
               <div class="fan-card-vignette"></div>
             </div>
             <span class="badge-pill is-live fan-card-badge">EU GRAND FINALIST</span>
@@ -412,7 +421,7 @@
           <!-- Card 4: 7VEN CECE -->
           <div class="fan-card" data-index="4" data-athlete-slug="cece">
             <div class="fan-card-img-wrap">
-              <img src="assets/images/roster/cece.jpg" alt="7VEN CECE" class="fan-card-img">
+              <img src="assets/images/roster/cece.jpg" alt="7VEN CECE" class="fan-card-img" loading="lazy" decoding="async">
               <div class="fan-card-vignette"></div>
             </div>
             <span class="badge-pill fan-card-badge">TWITCH PARTNER</span>
@@ -427,7 +436,7 @@
           <!-- Card 5: 7VEN Thorik -->
           <div class="fan-card" data-index="5" data-athlete-slug="thorik">
             <div class="fan-card-img-wrap">
-              <img src="assets/images/roster/thorik.jpg" alt="7VEN Thorik" class="fan-card-img">
+              <img src="assets/images/roster/thorik.jpg" alt="7VEN Thorik" class="fan-card-img" loading="lazy" decoding="async">
               <div class="fan-card-vignette"></div>
             </div>
             <span class="badge-pill is-live fan-card-badge">FNCS CHAMPION</span>
@@ -442,7 +451,7 @@
           <!-- Card 6: 7VEN Sxhool -->
           <div class="fan-card" data-index="6" data-athlete-slug="sxhool">
             <div class="fan-card-img-wrap">
-              <img src="assets/images/roster/sxhool.jpg" alt="7VEN Sxhool" class="fan-card-img">
+              <img src="assets/images/roster/sxhool.jpg" alt="7VEN Sxhool" class="fan-card-img" loading="lazy" decoding="async">
               <div class="fan-card-vignette"></div>
             </div>
             <span class="badge-pill is-live fan-card-badge">FNCS CHAMPION</span>
@@ -981,7 +990,48 @@
     </div>
   </div>
 
-  <!-- Scripts -->
+  <!-- --------------------------------------------------------------------------
+       15. MOBILE NAVIGATION DRAWER
+       -------------------------------------------------------------------------- -->
+  <div class="mobile-drawer-overlay" id="mobileDrawerOverlay" role="dialog" aria-label="Mobile Navigation Menu">
+    <div class="mobile-drawer" id="mobileDrawer">
+      <div>
+        <div class="mobile-drawer-head">
+          <div class="ln-brand">
+            <img src="assets/images/7ven-brand-mark.png" alt="7VEN Crest" class="ln-brand-logo" style="height: 32px;">
+            <span class="ln-brand-title" style="font-size: 1.4rem;">7VEN CLUB</span>
+          </div>
+          <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close Navigation">✕</button>
+        </div>
+        
+        <nav class="mobile-drawer-nav">
+          <a href="#hero" class="mobile-nav-link">HOME</a>
+          <a href="athletes.html" class="mobile-nav-link">ATHLETES <span class="badge-pill is-live" style="font-size: 0.6rem; padding: 0.15rem 0.5rem; margin-left: 0.5rem;">41 PROS</span></a>
+          <a href="#roster" class="mobile-nav-link">SPOTLIGHT DECK</a>
+          <a href="#vault" class="mobile-nav-link">THE VAULT GEAR</a>
+          <a href="#calendar" class="mobile-nav-link">FIXTURES & PODIUMS</a>
+          <a href="#store" class="mobile-nav-link">LIMITED DROPS</a>
+          <a href="#manifesto" class="mobile-nav-link">VISION & SYSTEM</a>
+          <a href="#contact" class="mobile-nav-link">JOIN THE CLUB</a>
+        </nav>
+      </div>
+
+      <div class="mobile-drawer-footer">
+        <div class="mobile-drawer-telemetry">
+          <span class="text-eyebrow" style="font-size: 0.65rem;">// HARDWARE TELEMETRY PROFILE</span>
+          <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--color--white-muted); margin-top: 0.25rem;">
+            SYSTEM STATUS: <span id="mobileDeviceTier" style="color: var(--color--lime);">OPTIMIZED MOBILE</span>
+          </div>
+        </div>
+        <a href="#contact" class="btn-ln btn-ln-primary" style="width: 100%; text-align: center; margin-top: 1rem; padding: 0.8rem 1rem;">
+          <span>JOIN 7VEN SOVEREIGN →</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts (Engine + Interaction + Roster) -->
+  <script src="js/adaptive-engine.js"></script>
   <script src="js/main.js"></script>
   <script src="js/athletes.js"></script>
 </body>

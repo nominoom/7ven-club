@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <span style="position: absolute; top: 1rem; right: 1rem; z-index: 2; font-family: var(--font-mono); font-size: 0.7rem; padding: 0.2rem 0.6rem; background: rgba(0,0,0,0.7); border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius-pill); color: var(--color--white);">
             ${athlete.region}
           </span>
-          <img src="${athlete.image}" alt="${athlete.name}" class="athlete-card-img" loading="lazy">
+          <img src="${athlete.image}" alt="${athlete.name}" class="athlete-card-img" loading="lazy" decoding="async">
         </div>
         <div class="athlete-card-body">
           <div>
@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentHovered = -1;
 
     function applyHoverState(hoveredIdx) {
-      if (window.innerWidth <= 600) return; // Mobile horizontal scroll
+      if (window.innerWidth <= 860 || ('ontouchstart' in window)) return; // Mobile touch horizontal carousel
       const configs = getBaseConfigs();
       currentHovered = hoveredIdx;
 
