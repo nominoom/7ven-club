@@ -98,46 +98,9 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ------------------------------------------------------------------------
-  // 2. DUAL-STAGE MODE SWITCHER ("ON STAGE" vs "OFF STAGE")
+  // 2. STAGE MODE (PERMANENT "ON STAGE" COMPETITIVE MODE)
   // ------------------------------------------------------------------------
-  const switcher = document.getElementById('stageSwitcher');
-  const pill = document.getElementById('switcherPill');
-  const btnOn = document.getElementById('btnOnStage');
-  const btnOff = document.getElementById('btnOffStage');
-
-  function setStageMode(mode) {
-    document.body.setAttribute('data-mode', mode);
-    sfx.playModeSwitch();
-
-    if (mode === 'on-stage') {
-      btnOn.classList.add('active');
-      btnOff.classList.remove('active');
-      if (pill) {
-        pill.style.left = `${btnOn.offsetLeft}px`;
-        pill.style.width = `${btnOn.offsetWidth}px`;
-      }
-      showToast('MODE: ON STAGE (COMPETITIVE ESPORTS & TOURNAMENTS)');
-    } else {
-      btnOff.classList.add('active');
-      btnOn.classList.remove('active');
-      if (pill) {
-        pill.style.left = `${btnOff.offsetLeft}px`;
-        pill.style.width = `${btnOff.offsetWidth}px`;
-      }
-      showToast('MODE: OFF STAGE (STREETWEAR DROPS & CULTURE)');
-    }
-  }
-
-  if (switcher && pill && btnOn && btnOff) {
-    // Initial pill placement
-    setTimeout(() => {
-      pill.style.left = `${btnOn.offsetLeft}px`;
-      pill.style.width = `${btnOn.offsetWidth}px`;
-    }, 100);
-
-    btnOn.addEventListener('click', () => setStageMode('on-stage'));
-    btnOff.addEventListener('click', () => setStageMode('off-stage'));
-  }
+  document.body.setAttribute('data-mode', 'on-stage');
 
   // ------------------------------------------------------------------------
   // 3. NAVBAR SCROLL & ACTIVE SPY
