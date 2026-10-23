@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en" data-mode="on-stage">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <title>7VEN CLUB — Sovereign Esports & Entertainment // LN4 Edition</title>
+  
+  <meta name="description" content="Official portal for Club 7VEN: FNCS Champions, World Series Winners, NFL Pros, high-velocity esports rosters, exclusive LN-style merchandise, and the Vault gear archive.">
+  <meta property="og:title" content="7VEN CLUB — Dominant By Design">
+  <meta property="og:description" content="We don't follow the rules, we re-write them. The home of the industry's most dangerous roster.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="assets/images/7ven-logo.png">
+
+  <!-- Google Fonts: Syne (Ultra modern display) + Anton (Motorsport condensed) + Space Grotesk (HUD monospace) + Inter (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body data-mode="on-stage">
+
+  <!-- Ambient Grid & Lighting Backgrounds -->
+  <div class="tech-grid-overlay" aria-hidden="true"></div>
+  <div class="ambient-glow-top" aria-hidden="true"></div>
+
+  <!-- --------------------------------------------------------------------------
+       1. FIXED HIGH-TECH HEADER & NAVIGATION
+       -------------------------------------------------------------------------- -->
+  <header class="ln-nav" id="mainNav">
+    <div class="container ln-nav-inner">
+      
+      <!-- Brand Logotype -->
+      <a href="#hero" class="ln-brand" id="brandLink" aria-label="7VEN Club Home">
+        <img src="assets/images/7ven-brand-mark.png" alt="7VEN Crest" class="ln-brand-logo">
+        <div class="ln-brand-text">
+          <span class="ln-brand-title">7VEN</span>
+          <span class="ln-brand-badge">[LN4 // PROTOCOL]</span>
+        </div>
+      </a>
+
+      <!-- Lando Norris Inspired Dual-Stage Switcher -->
+      <div class="ln-stage-switcher" id="stageSwitcher" role="tablist" aria-label="Experience Mode Switcher">
+        <div class="switcher-pill" id="switcherPill"></div>
+        <button class="switcher-btn active" id="btnOnStage" role="tab" aria-selected="true" data-mode="on-stage">
+          <span class="live-dot"></span>
+          ON STAGE
+        </button>
+        <button class="switcher-btn" id="btnOffStage" role="tab" aria-selected="false" data-mode="off-stage">
+          OFF STAGE
+        </button>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="ln-nav-links">
+          <li><a href="#roster" class="ln-nav-link">Roster</a></li>
+          <li><a href="#vault" class="ln-nav-link">The Vault</a></li>
+          <li><a href="#calendar" class="ln-nav-link">Fixtures</a></li>
+          <li><a href="#store" class="ln-nav-link">Drops</a></li>
+          <li><a href="#manifesto" class="ln-nav-link">Vision</a></li>
+          <li><a href="#contact" class="ln-nav-link">Join</a></li>
+        </ul>
+      </nav>
+
+      <!-- Utility Actions (Audio SFX + Cart Drawer + Join Button) -->
+      <div class="ln-nav-actions">
+        
+        <!-- Web Audio SFX Toggle -->
+        <button class="sound-toggle-btn" id="soundToggleBtn" title="Toggle Interface Audio Telemetry" aria-label="Toggle Sound Effects">
+          <div class="sound-bars" aria-hidden="true">
+            <span class="sound-bar"></span>
+            <span class="sound-bar"></span>
+            <span class="sound-bar"></span>
+          </div>
+          <span class="sound-status-text">SFX: ON</span>
+        </button>
+
+        <!-- Cart Trigger -->
+        <button class="cart-trigger-btn" id="cartTrigger" title="Open Vault Cart" aria-label="Open Shopping Cart">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" color="#d2ff00">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-badge-count" id="cartBadge" style="display: none;">0</span>
+        </button>
+
+        <!-- Primary CTA with LN4 Rolling Text Effect -->
+        <a href="#contact" class="btn-ln btn-ln-primary" id="navCtaBtn">
+          <span class="btn-roll-text" data-text="JOIN 7VEN">
+            <span>JOIN 7VEN</span>
+          </span>
+          <svg class="btn-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
+
+        <!-- Mobile Toggle Button -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+          <span class="mobile-menu-bar"></span>
+          <span class="mobile-menu-bar"></span>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- --------------------------------------------------------------------------
+       2. HERO SECTION — HIGH-OCTANE STAGE
+       -------------------------------------------------------------------------- -->
+  <main>
+    <section class="hero-section" id="hero">
+      
+      <!-- Video / Animated Stage Background Backdrop -->
+      <div class="hero-bg-container" aria-hidden="true">
+        <img src="assets/images/stage-gif.gif" alt="7VEN Tournament Stage Background" class="hero-stage-media">
+        <div class="hero-vignette"></div>
+      </div>
+
+      <div class="container hero-content">
+        
+        <!-- Live Telemetry Badges -->
+        <div class="hero-meta-strip">
+          <div class="hero-tag-group">
+            <span class="badge-pill is-live">
+              <span class="live-dot"></span>
+              7VEN WORLDWIDE // PRO ESPORTS & ENTERTAINMENT
+            </span>
+            <span class="badge-pill is-dark">EST. 2024 • DOMINANT BY DESIGN</span>
+          </div>
+          <span class="text-eyebrow">
+            GPS // 32.7767° N, 96.7970° W
+          </span>
+        </div>
+
+        <!-- Huge Typographic Headline -->
+        <div class="hero-title-wrap">
+          <h1 class="hero-title-main">
+            7VEN<span class="hero-title-accent">.</span>CLUB
+          </h1>
+        </div>
+
+        <!-- Subtitles & Value Proposition (Direct from 7ven.club) -->
+        <div class="hero-subtitle-bar">
+          <div class="hero-slogan">
+            WE DON'T FOLLOW THE RULES, <span class="highlight-lime">WE RE-WRITE THEM.</span>
+          </div>
+          <p class="text-lead" style="max-width: 720px;">
+            The blueprint of modern esports, sport, and entertainment. Sovereign home for the industry’s most lethal roster: FNCS Champions, MLB World Series Winners, and NFL Pros.
+          </p>
+        </div>
+
+        <!-- Action CTAs -->
+        <div class="hero-actions">
+          <a href="#roster" class="btn-ln btn-ln-primary">
+            <span class="btn-roll-text" data-text="EXPLORE ROSTER">
+              <span>EXPLORE ROSTER</span>
+            </span>
+            <svg class="btn-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
+
+          <a href="#vault" class="btn-ln btn-ln-secondary">
+            <span class="btn-roll-text" data-text="THE VAULT GEAR">
+              <span>THE VAULT GEAR</span>
+            </span>
+          </a>
+
+          <a href="#store" class="btn-ln btn-ln-outline">
+            <span class="btn-roll-text" data-text="OFFICIAL STORE">
+              <span>OFFICIAL STORE</span>
+            </span>
+          </a>
+        </div>
+
+        <!-- Telemetry Data Bar (Mirroring LN4 Grand Prix telemetry widgets) -->
+        <div class="hero-telemetry-bar">
+          <div class="telemetry-grid">
+            
+            <div class="telemetry-card">
+              <span class="telemetry-label">
+                <span class="live-dot"></span>
+                NEXT MAJOR SHOWDOWN
+              </span>
+              <span class="telemetry-value lime" id="telemetryCountdown">
+                3D 14H 22M 10S
+              </span>
+              <span class="text-mono" style="font-size: 0.7rem; color: var(--color--grey-on-track);">FNCS GLOBAL INVITATIONAL // DALLAS</span>
+            </div>
+
+            <div class="telemetry-card">
+              <span class="telemetry-label">CAREER PRIZE EARNINGS</span>
+              <span class="telemetry-value lime">$410,480+</span>
+              <span class="text-mono" style="font-size: 0.7rem; color: var(--color--grey-on-track);">TRACKED PRO COMPETITIVE PURSES</span>
+            </div>
+
+            <div class="telemetry-card">
+              <span class="telemetry-label">GLOBAL ACTIVE ROSTER</span>
+              <span class="telemetry-value">32 ATHLETES</span>
+              <span class="text-mono" style="font-size: 0.7rem; color: var(--color--grey-on-track);">NA-C • EUROPE • BRAZIL • JAPAN</span>
+            </div>
+
+            <div class="telemetry-card">
+              <span class="telemetry-label">CHAMPIONSHIP DIVISIONS</span>
+              <span class="telemetry-value">4 TITLES</span>
+              <span class="text-mono" style="font-size: 0.7rem; color: var(--color--grey-on-track);">FORTNITE • VALORANT • R6 • POKÉMON</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------------
+         3. DUAL RUNNING MARQUEE TICKER (LN4 INFINITE STREAM)
+         -------------------------------------------------------------------------- -->
+    <div class="marquee-section marquee-strip-lime" aria-hidden="true">
+      <div class="marquee-track left">
+        <span class="marquee-item">7VEN CLUB <span class="marquee-separator">✦</span></span>
+        <span class="marquee-item">TRENDSETTERS BY NATURE <span class="marquee-separator">✦</span></span>
+        <span class="marquee-item">DOMINANT BY DESIGN <span class="marquee-separator">✦</span></span>
+        <span class="marquee-item">FNCS CHAMPIONS <span class="marquee-separator">✦</span></span>
+        <span class="marquee-item">VALORANT STARS <span class="marquee-separator">✦</span></span>
+        <span class="marquee-item">MLB WORLD SERIES PROS <span class="marquee-separator">✦</span></span>
+        <span class="marquee-item">RE-WRITING THE ESPORTS BLUEPRINT <span class="marquee-separator">✦</span></span>
+        <!-- Duplicated for seamless loop -->
+        <span class="marquee-item">7VEN CLUB <span class="marquee-separator">✦</span></span>
+        <span class="marquee-item">TRENDSETTERS BY NATURE <span class="marquee-separator">✦</span></span>
+        <span class="marquee-item">DOMINANT BY DESIGN <span class="marquee-separator">✦</span></span>
+        <span class="marquee-item">FNCS CHAMPIONS <span class="marquee-separator">✦</span></span>
+        <span class="marquee-item">VALORANT STARS <span class="marquee-separator">✦</span></span>
+        <span class="marquee-item">MLB WORLD SERIES PROS <span class="marquee-separator">✦</span></span>
+        <span class="marquee-item">RE-WRITING THE ESPORTS BLUEPRINT <span class="marquee-separator">✦</span></span>
+      </div>
+    </div>
+
+    <!-- --------------------------------------------------------------------------
+         4. THE VAULT — GEAR & ARMOR ARCHIVE (LANDO HELMET SHOWCASE REIMAGINED)
+         -------------------------------------------------------------------------- -->
+    <section class="vault-section" id="vault">
+      <div class="container">
+        
+        <div class="section-head">
+          <div class="section-head-row">
+            <div>
+              <span class="text-eyebrow">// 01 • THE VAULT ARCHIVE</span>
+              <h2 class="text-impact" style="margin-top: 0.5rem;">
+                BATTLE <span class="highlight-lime">ARMOR.</span>
+              </h2>
+            </div>
+            <p class="text-lead" style="max-width: 500px;">
+              Direct translation of Lando Norris’s iconic Helmet Showcase. Bespoke competition gear engineered for precision, high thermal dispersion, and podium glory.
+            </p>
+          </div>
+        </div>
+
+        <div class="vault-grid">
+          
+          <!-- Vault Item 1: Cyber Helmet -->
+          <article class="vault-card" data-vault-id="helmet" id="vaultItem1">
+            <div class="vault-card-header">
+              <span class="vault-card-num">[01 // CYBER HELMET]</span>
+              <span class="badge-pill">LN4 LIVERY</span>
+            </div>
+            <div class="vault-media-wrap">
+              <img src="assets/images/vault-helmet.jpg" alt="7VEN Cyber Strike Helmet" class="vault-img">
+            </div>
+            <div class="vault-card-footer">
+              <h3 class="vault-item-name">CYBER STRIKE '26</h3>
+              <div class="vault-item-spec">
+                <span>MULTI-AXIAL CARBON FIBER</span>
+                <span class="vault-inspect-tag">INSPECT [HUD] →</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Vault Item 2: Pro Controller -->
+          <article class="vault-card" data-vault-id="controller" id="vaultItem2">
+            <div class="vault-card-header">
+              <span class="vault-card-num">[02 // TOURNAMENT CONTROLLER]</span>
+              <span class="badge-pill">1000HZ OPTICAL</span>
+            </div>
+            <div class="vault-media-wrap">
+              <img src="assets/images/vault-controller.jpg" alt="7VEN Carbon Zero Pro Controller" class="vault-img">
+            </div>
+            <div class="vault-card-footer">
+              <h3 class="vault-item-name">CARBON ZERO PRO</h3>
+              <div class="vault-item-spec">
+                <span>TITANIUM & CARBON COMPOSITE</span>
+                <span class="vault-inspect-tag">INSPECT [HUD] →</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Vault Item 3: Racing Division Hoodie -->
+          <article class="vault-card" data-vault-id="hoodie" id="vaultItem3">
+            <div class="vault-card-header">
+              <span class="vault-card-num">[03 // APPAREL ARCHIVE]</span>
+              <span class="badge-pill">480 GSM</span>
+            </div>
+            <div class="vault-media-wrap">
+              <img src="assets/images/merch-hoodie.jpg" alt="7VEN Racing Division Hoodie" class="vault-img">
+            </div>
+            <div class="vault-card-footer">
+              <h3 class="vault-item-name">RACING DIVISION HOODIE</h3>
+              <div class="vault-item-spec">
+                <span>HEAVYWEIGHT OBSIDIAN COTTON</span>
+                <span class="vault-inspect-tag">INSPECT [HUD] →</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Vault Item 4: Speed Division Cap -->
+          <article class="vault-card" data-vault-id="cap" id="vaultItem4">
+            <div class="vault-card-header">
+              <span class="vault-card-num">[04 // PODIUM HEADWEAR]</span>
+              <span class="badge-pill">3D EMBROIDERY</span>
+            </div>
+            <div class="vault-media-wrap">
+              <img src="assets/images/merch-cap.jpg" alt="7VEN Speed Division Cap" class="vault-img">
+            </div>
+            <div class="vault-card-footer">
+              <h3 class="vault-item-name">SPEED DIVISION CAP 07</h3>
+              <div class="vault-item-spec">
+                <span>RIPSTOP PERFORMANCE FABRIC</span>
+                <span class="vault-inspect-tag">INSPECT [HUD] →</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------------
+         5. ACTIVE ROSTER / HALL OF FAME (LANDO DRIVER CARDS STYLE)
+         -------------------------------------------------------------------------- -->
+    <section class="roster-section" id="roster">
+      <div class="container">
+        
+        <div class="section-head">
+          <div class="section-head-row">
+            <div>
+              <span class="text-eyebrow">// 02 • ACTIVE ROSTER</span>
+              <h2 class="text-impact" style="margin-top: 0.5rem;">
+                THE <span class="highlight-lime">DRIVERS.</span>
+              </h2>
+            </div>
+            <p class="text-lead" style="max-width: 520px;">
+              Champions built to thrive under extreme pressure. Every member plays a critical operational role in 7VEN’s global conquest.
+            </p>
+          </div>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="roster-filter-bar" role="tablist" aria-label="Roster Filter">
+          <button class="roster-filter-btn active" data-filter="all">All Divisions [32]</button>
+          <button class="roster-filter-btn" data-filter="fortnite">Fortnite [FNCS]</button>
+          <button class="roster-filter-btn" data-filter="valorant">VALORANT Stars</button>
+          <button class="roster-filter-btn" data-filter="r6">R6 Siege Pro</button>
+          <button class="roster-filter-btn" data-filter="pokemon">Pokémon Unite</button>
+          <button class="roster-filter-btn" data-filter="creators">Athletes & Icons</button>
+        </div>
+
+        <!-- Player Cards Grid -->
+        <div class="roster-grid">
+          
+          <!-- Player 1: 7VEN Avivv -->
+          <article class="player-card" data-category="fortnite all" id="playerAvivv">
+            <div class="player-card-media">
+              <span class="badge-pill is-live player-overlay-badge">FNCS PRO</span>
+              <span class="player-region-tag">NA-C</span>
+              <img src="assets/images/player-avivv.png" alt="7VEN Avivv" class="player-photo">
+            </div>
+            <div class="player-card-body">
+              <div>
+                <h3 class="player-callsign">7VEN AVIVV</h3>
+                <span class="player-role-sub">NORTH AMERICA CENTRAL // FORTNITE</span>
+              </div>
+              <div class="player-earnings-row">
+                <span class="earnings-label">CAREER EARNINGS</span>
+                <span class="earnings-amount">$226,860</span>
+              </div>
+              <p class="player-bio-snippet">
+                Championship powerhouse dominating NA-Central leaderboards. Pinnacle clutch specialist in end-game FNCS storm circles.
+              </p>
+            </div>
+          </article>
+
+          <!-- Player 2: 7VEN GMONEY -->
+          <article class="player-card" data-category="fortnite all" id="playerGmoney">
+            <div class="player-card-media">
+              <span class="badge-pill is-live player-overlay-badge">FNCS PRO</span>
+              <span class="player-region-tag">NA-E</span>
+              <img src="assets/images/player-gmoney.png" alt="7VEN GMONEY" class="player-photo">
+            </div>
+            <div class="player-card-body">
+              <div>
+                <h3 class="player-callsign">7VEN GMONEY</h3>
+                <span class="player-role-sub">COMPETITIVE STAGE // FORTNITE</span>
+              </div>
+              <div class="player-earnings-row">
+                <span class="earnings-label">CAREER EARNINGS</span>
+                <span class="earnings-amount">$57,550</span>
+              </div>
+              <p class="player-bio-snippet">
+                High-kill frag specialist with proven consistency across major competitive cups and LAN showdowns.
+              </p>
+            </div>
+          </article>
+
+          <!-- Player 3: 7VEN Tyler Zuber (MLB Crossover) -->
+          <article class="player-card" data-category="creators all" id="playerZuber">
+            <div class="player-card-media">
+              <span class="badge-pill player-overlay-badge">MLB WORLD SERIES</span>
+              <span class="player-region-tag">USA</span>
+              <img src="assets/images/player-zuber.png" alt="7VEN Tyler Zuber" class="player-photo">
+            </div>
+            <div class="player-card-body">
+              <div>
+                <h3 class="player-callsign">7VEN TYLER ZUBER</h3>
+                <span class="player-role-sub">PRO MLB PITCHER // 7VEN ATHLETE</span>
+              </div>
+              <div class="player-earnings-row">
+                <span class="earnings-label">ATHLETE DIVISION</span>
+                <span class="earnings-amount">PRO LEAGUE</span>
+              </div>
+              <p class="player-bio-snippet">
+                Major League Baseball standout bringing real sports grit and professional execution directly into the 7VEN arena.
+              </p>
+            </div>
+          </article>
+
+          <!-- Player 4: 7VEN Blake Sciortino -->
+          <article class="player-card" data-category="creators all" id="playerBlake">
+            <div class="player-card-media">
+              <span class="badge-pill player-overlay-badge">VIP AMBASSADOR</span>
+              <span class="player-region-tag">USA</span>
+              <img src="assets/images/player-blake.png" alt="7VEN Blake Sciortino" class="player-photo">
+            </div>
+            <div class="player-card-body">
+              <div>
+                <h3 class="player-callsign">7VEN BLAKE SCIORTINO</h3>
+                <span class="player-role-sub">FILM & CULTURE ICON</span>
+              </div>
+              <div class="player-earnings-row">
+                <span class="earnings-label">DIVISION</span>
+                <span class="earnings-amount">CREATIVE LEAD</span>
+              </div>
+              <p class="player-bio-snippet">
+                Spearheading 7VEN’s film and lifestyle direction, uniting cinema aesthetics with next-generation motorsport culture.
+              </p>
+            </div>
+          </article>
+
+          <!-- Player 5: 7VEN CRINGE -->
+          <article class="player-card" data-category="fortnite all" id="playerCringe">
+            <div class="player-card-media">
+              <span class="badge-pill is-live player-overlay-badge">EUROPE FNCS</span>
+              <span class="player-region-tag">EU</span>
+              <img src="assets/images/player-cringe.png" alt="7VEN Cringe" class="player-photo">
+            </div>
+            <div class="player-card-body">
+              <div>
+                <h3 class="player-callsign">7VEN CRINGE</h3>
+                <span class="player-role-sub">EUROPEAN LEAGUE // FORTNITE</span>
+              </div>
+              <div class="player-earnings-row">
+                <span class="earnings-label">CAREER EARNINGS</span>
+                <span class="earnings-amount">$86,565</span>
+              </div>
+              <p class="player-bio-snippet">
+                European competitive juggernaut renowned across EU Grand Finals for fearless mechanical dominance.
+              </p>
+            </div>
+          </article>
+
+          <!-- Player 6: 7VEN SEVEN -->
+          <article class="player-card" data-category="fortnite all" id="playerSeven">
+            <div class="player-card-media">
+              <span class="badge-pill is-live player-overlay-badge">BRAZIL FNCS</span>
+              <span class="player-region-tag">BR</span>
+              <img src="assets/images/player-seven.png" alt="7VEN Seven" class="player-photo">
+            </div>
+            <div class="player-card-body">
+              <div>
+                <h3 class="player-callsign">7VEN SEVEN</h3>
+                <span class="player-role-sub">BRAZIL DIVISION // FORTNITE</span>
+              </div>
+              <div class="player-earnings-row">
+                <span class="earnings-label">CAREER EARNINGS</span>
+                <span class="earnings-amount">$13,990</span>
+              </div>
+              <p class="player-bio-snippet">
+                South American sensation carrying the iconic namesake jersey into championship brackets.
+              </p>
+            </div>
+          </article>
+
+          <!-- Player 7: 7VEN STARS (VALORANT) -->
+          <article class="player-card" data-category="valorant all" id="playerStars">
+            <div class="player-card-media">
+              <span class="badge-pill is-live player-overlay-badge">VCT PRO</span>
+              <span class="player-region-tag">GLOBAL</span>
+              <img src="assets/images/valorant-star.png" alt="7VEN Stars Valorant" class="player-photo">
+            </div>
+            <div class="player-card-body">
+              <div>
+                <h3 class="player-callsign">7VEN STARS</h3>
+                <span class="player-role-sub">VALORANT ESPORTS DIVISION</span>
+              </div>
+              <div class="player-earnings-row">
+                <span class="earnings-label">STATUS</span>
+                <span class="earnings-amount">VCT MASTERS</span>
+              </div>
+              <p class="player-bio-snippet">
+                The tactical vanguard. Surgical site executes, ruthless duelist initiations, and ironclad defusal discipline.
+              </p>
+            </div>
+          </article>
+
+          <!-- Player 8: 7VEN CECE (Content & Twitch) -->
+          <article class="player-card" data-category="creators all" id="playerCece">
+            <div class="player-card-media">
+              <span class="badge-pill player-overlay-badge">TWITCH PARTNER</span>
+              <span class="player-region-tag">60K+ TIKTOK</span>
+              <img src="assets/images/team-banner.jpg" alt="7VEN CECE" class="player-photo" style="object-fit: cover;">
+            </div>
+            <div class="player-card-body">
+              <div>
+                <h3 class="player-callsign">7VEN CECE</h3>
+                <span class="player-role-sub">TWITCH PARTNER • ZERO BUILD</span>
+              </div>
+              <div class="player-earnings-row">
+                <span class="earnings-label">COMPETITIVE EARNINGS</span>
+                <span class="earnings-amount">$20,000+</span>
+              </div>
+              <p class="player-bio-snippet">
+                Elite creator uniting zero-build tournament precision with engaging live stream entertainment.
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------------
+         6. FIXTURES & TOURNAMENT CALENDAR (LANDO GRAND PRIX CALENDAR)
+         -------------------------------------------------------------------------- -->
+    <section class="calendar-section" id="calendar">
+      <div class="container">
+        
+        <div class="section-head">
+          <div class="section-head-row">
+            <div>
+              <span class="text-eyebrow">// 03 • RACE & MATCH TRACKER</span>
+              <h2 class="text-impact" style="margin-top: 0.5rem;">
+                FIXTURES <span class="highlight-lime">CALENDAR.</span>
+              </h2>
+            </div>
+            <p class="text-lead" style="max-width: 520px;">
+              Replicating the Lando Norris F1 Grand Prix track schedule. Track live fixtures, arena coordinates, and podium results across all 7VEN divisions.
+            </p>
+          </div>
+        </div>
+
+        <div class="calendar-table">
+          
+          <!-- Round 1 -->
+          <div class="cal-row">
+            <span class="cal-round">R01</span>
+            <div>
+              <div class="cal-event-name">FNCS GLOBAL CHAMPIONSHIPS</div>
+              <div class="cal-location">DALLAS ARENA, USA</div>
+            </div>
+            <span class="cal-division">FORTNITE PRO</span>
+            <span class="text-mono" style="color: var(--color--lime); font-size: 0.85rem;">1ST PLACE [VICTORY]</span>
+            <span class="cal-status status-victory">PODIUM #1 🏆</span>
+          </div>
+
+          <!-- Round 2 -->
+          <div class="cal-row">
+            <span class="cal-round">R02</span>
+            <div>
+              <div class="cal-event-name">VALORANT MASTERS REYKJAVÍK</div>
+              <div class="cal-location">LAUGARDALSHÖLL, ICELAND</div>
+            </div>
+            <span class="cal-division">7VEN STARS</span>
+            <span class="text-mono" style="color: var(--color--lime); font-size: 0.85rem;">3 - 0 CLEAN SWEEP</span>
+            <span class="cal-status status-victory">QUALIFIED 🏆</span>
+          </div>
+
+          <!-- Round 3 -->
+          <div class="cal-row">
+            <span class="cal-round">R03</span>
+            <div>
+              <div class="cal-event-name">RAINBOW SIX INVITATIONAL</div>
+              <div class="cal-location">MONTREAL, CANADA</div>
+            </div>
+            <span class="cal-division">R6 SIEGE</span>
+            <span class="text-mono" style="color: var(--color--lime); font-size: 0.85rem;">TOP 4 FINALIST</span>
+            <span class="cal-status status-victory">PRIZE $45K</span>
+          </div>
+
+          <!-- Round 4 -->
+          <div class="cal-row" style="border-color: var(--color--lime); background: rgba(210, 255, 0, 0.04);">
+            <span class="cal-round" style="color: var(--color--lime);">R04</span>
+            <div>
+              <div class="cal-event-name">POKÉMON UNITE WORLD FINALS</div>
+              <div class="cal-location">PACIFICO YOKOHAMA, JAPAN</div>
+            </div>
+            <span class="cal-division">POKÉMON PRO</span>
+            <span class="text-mono" style="color: #ffb800; font-size: 0.85rem;">STARTS IN 3 DAYS</span>
+            <span class="cal-status status-upcoming">NEXT LIVE ⚡</span>
+          </div>
+
+          <!-- Round 5 -->
+          <div class="cal-row">
+            <span class="cal-round">R05</span>
+            <div>
+              <div class="cal-event-name">SUMMER ZERO BUILD SMASH</div>
+              <div class="cal-location">LOS ANGELES, USA</div>
+            </div>
+            <span class="cal-division">CREATOR STAGE</span>
+            <span class="text-mono" style="color: var(--color--grey-on-track); font-size: 0.85rem;">REGISTRATION OPEN</span>
+            <span class="cal-status" style="color: var(--color--white-muted);">UPCOMING</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------------
+         7. OFFICIAL STORE & DROPS (LN4 APPAREL STOREFRONT)
+         -------------------------------------------------------------------------- -->
+    <section class="store-section" id="store">
+      <div class="container">
+        
+        <div class="section-head">
+          <div class="section-head-row">
+            <div>
+              <span class="text-eyebrow">// 04 • EXCLUSIVE DROPS</span>
+              <h2 class="text-impact" style="margin-top: 0.5rem;">
+                THE <span class="highlight-lime">MERCH.</span>
+              </h2>
+            </div>
+            <p class="text-lead" style="max-width: 520px;">
+              Direct from the 7VEN Official Store. Limited motorsport apparel engineered with premium heavyweight cotton, reflective racing graphics, and cyber badges.
+            </p>
+          </div>
+        </div>
+
+        <div class="store-grid">
+          
+          <!-- Product 1: Racing Division Hoodie -->
+          <article class="product-card">
+            <div class="product-media">
+              <span class="badge-pill is-live product-tag">HOT DROP</span>
+              <img src="assets/images/merch-hoodie.jpg" alt="7VEN Racing Division Hoodie" class="product-img">
+            </div>
+            <div class="product-body">
+              <div>
+                <div class="product-info-head">
+                  <h3 class="product-title">7VEN RACING HOODIE</h3>
+                  <span class="product-price">$85.00</span>
+                </div>
+                <p style="font-size: 0.8rem; color: var(--color--grey-on-track); margin-top: 0.4rem;">
+                  480GSM luxury loopback French terry with neon lime high-density typography.
+                </p>
+              </div>
+
+              <div>
+                <span class="form-label" style="font-size: 0.65rem; margin-bottom: 0.35rem; display: block;">SELECT SIZE</span>
+                <div class="size-selector">
+                  <button class="size-btn">S</button>
+                  <button class="size-btn selected">M</button>
+                  <button class="size-btn">L</button>
+                  <button class="size-btn">XL</button>
+                </div>
+              </div>
+
+              <button class="btn-ln btn-ln-primary add-to-cart-btn" style="width: 100%;">
+                <span class="btn-roll-text" data-text="ADD TO CART">
+                  <span>ADD TO CART</span>
+                </span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 2: Speed Division Cap -->
+          <article class="product-card">
+            <div class="product-media">
+              <span class="badge-pill product-tag">PODIUM KIT</span>
+              <img src="assets/images/merch-cap.jpg" alt="7VEN Speed Division Cap" class="product-img">
+            </div>
+            <div class="product-body">
+              <div>
+                <div class="product-info-head">
+                  <h3 class="product-title">SPEED DIVISION CAP 07</h3>
+                  <span class="product-price">$45.00</span>
+                </div>
+                <p style="font-size: 0.8rem; color: var(--color--grey-on-track); margin-top: 0.4rem;">
+                  Technical structured crown with 3D lime embroidered crest and magnetic strap.
+                </p>
+              </div>
+
+              <div>
+                <span class="form-label" style="font-size: 0.65rem; margin-bottom: 0.35rem; display: block;">SIZE</span>
+                <div class="size-selector">
+                  <button class="size-btn selected">ONE SIZE</button>
+                </div>
+              </div>
+
+              <button class="btn-ln btn-ln-primary add-to-cart-btn" style="width: 100%;">
+                <span class="btn-roll-text" data-text="ADD TO CART">
+                  <span>ADD TO CART</span>
+                </span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 3: Carbon Zero Controller -->
+          <article class="product-card">
+            <div class="product-media">
+              <span class="badge-pill is-live product-tag">PRO HARDWARE</span>
+              <img src="assets/images/vault-controller.jpg" alt="7VEN Carbon Zero Pro Controller" class="product-img">
+            </div>
+            <div class="product-body">
+              <div>
+                <div class="product-info-head">
+                  <h3 class="product-title">CARBON ZERO CONTROLLER</h3>
+                  <span class="product-price">$189.00</span>
+                </div>
+                <p style="font-size: 0.8rem; color: var(--color--grey-on-track); margin-top: 0.4rem;">
+                  Forged carbon faceplate, hall-effect optical joysticks, and illuminated triggers.
+                </p>
+              </div>
+
+              <div>
+                <span class="form-label" style="font-size: 0.65rem; margin-bottom: 0.35rem; display: block;">EDITION</span>
+                <div class="size-selector">
+                  <button class="size-btn selected">PRO ESPORTS</button>
+                </div>
+              </div>
+
+              <button class="btn-ln btn-ln-primary add-to-cart-btn" style="width: 100%;">
+                <span class="btn-roll-text" data-text="ADD TO CART">
+                  <span>ADD TO CART</span>
+                </span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 4: Official Stage Jersey -->
+          <article class="product-card">
+            <div class="product-media">
+              <span class="badge-pill product-tag">OFFICIAL UNIFORM</span>
+              <img src="assets/images/merch-hero.png" alt="7VEN Official Stage Jersey" class="product-img">
+            </div>
+            <div class="product-body">
+              <div>
+                <div class="product-info-head">
+                  <h3 class="product-title">PRO STAGE JERSEY '26</h3>
+                  <span class="product-price">$75.00</span>
+                </div>
+                <p style="font-size: 0.8rem; color: var(--color--grey-on-track); margin-top: 0.4rem;">
+                  Moisture-wicking aerotech mesh with custom tournament sponsor badges.
+                </p>
+              </div>
+
+              <div>
+                <span class="form-label" style="font-size: 0.65rem; margin-bottom: 0.35rem; display: block;">SELECT SIZE</span>
+                <div class="size-selector">
+                  <button class="size-btn">S</button>
+                  <button class="size-btn">M</button>
+                  <button class="size-btn selected">L</button>
+                  <button class="size-btn">XL</button>
+                </div>
+              </div>
+
+              <button class="btn-ln btn-ln-primary add-to-cart-btn" style="width: 100%;">
+                <span class="btn-roll-text" data-text="ADD TO CART">
+                  <span>ADD TO CART</span>
+                </span>
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------------
+         8. MANIFESTO & THE VISION
+         -------------------------------------------------------------------------- -->
+    <section class="manifesto-section" id="manifesto">
+      <div class="container manifesto-grid">
+        
+        <div>
+          <span class="text-eyebrow">// 05 • BEHIND THE VISION</span>
+          <h2 class="manifesto-headline" style="margin-top: 0.75rem;">
+            DOMINANT <span class="highlight-lime">BY DESIGN.</span>
+          </h2>
+          <p class="text-lead" style="margin-top: 1.5rem;">
+            Club 7VEN is a united team of independent professionals who have converged to disrupt traditional paradigms. Built on the raw ability to thrive under pressure, seize every competitive opportunity, and pursue the highest tier of individual and team prowess.
+          </p>
+          <div class="hero-actions" style="margin-top: 2rem;">
+            <a href="#contact" class="btn-ln btn-ln-primary">
+              <span class="btn-roll-text" data-text="JOIN THE MOVEMENT">
+                <span>JOIN THE MOVEMENT</span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <div class="manifesto-pillars">
+          
+          <div class="pillar-card tech-corner-box">
+            <h3 class="pillar-title">01 // UNRIVALED PRESSURE TOLERANCE</h3>
+            <p class="pillar-desc">
+              When championship matches come down to milliseconds and high-stakes endgames, our roster executes with surgical calmness and ruthless composure.
+            </p>
+          </div>
+
+          <div class="pillar-card tech-corner-box">
+            <h3 class="pillar-title">02 // CROSS-DISCIPLINE EXCELLENCE</h3>
+            <p class="pillar-desc">
+              Uniting FNCS Champions, MLB World Series Winners, NFL Athletes, and cinema storytellers under a singular sovereign banner.
+            </p>
+          </div>
+
+          <div class="pillar-card tech-corner-box">
+            <h3 class="pillar-title">03 // MOTORSPORT TECHNICAL ETHOS</h3>
+            <p class="pillar-desc">
+              Channeling the aerodynamics, discipline, and aesthetics of elite Formula 1 racing into modern esports hardware and apparel.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------------
+         9. JOIN 7VEN / CONTACT THE CLUB
+         -------------------------------------------------------------------------- -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        
+        <div class="section-head" style="text-align: center; align-items: center;">
+          <span class="text-eyebrow">// 06 • RECRUITMENT & PARTNERSHIPS</span>
+          <h2 class="text-impact" style="margin-top: 0.5rem;">
+            JOIN THE <span class="highlight-lime">CLUB.</span>
+          </h2>
+          <p class="text-lead" style="max-width: 600px; margin: 0 auto;">
+            Whether you are a competitive athlete looking to join our championship roster, a brand seeking sovereign partnerships, or a creator wanting to represent 7VEN.
+          </p>
+        </div>
+
+        <form class="contact-form tech-corner-box" id="joinForm">
+          
+          <div class="form-group">
+            <label for="formName" class="form-label">CALLSIGN / FULL NAME</label>
+            <input type="text" id="formName" class="form-input" placeholder="e.g. 7VEN ACE / Alex Vance" required>
+          </div>
+
+          <div class="form-group">
+            <label for="formEmail" class="form-label">COMMUNICATION FREQUENCY (EMAIL)</label>
+            <input type="email" id="formEmail" class="form-input" placeholder="alex@domain.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="formDivision" class="form-label">INTEREST / DIVISION</label>
+            <select id="formDivision" class="form-select">
+              <option value="Fortnite Pro">Competitive Fortnite [FNCS]</option>
+              <option value="VALORANT Stars">VALORANT Stars [VCT]</option>
+              <option value="R6 Siege">Rainbow Six Siege Pro</option>
+              <option value="Pokémon Unite">Pokémon Unite Championship</option>
+              <option value="Brand Partnership">Brand Sponsorship & Collaboration</option>
+              <option value="Content Creator">Content Creator & Streamer Roster</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="formMessage" class="form-label">TRANSMISSION MESSAGE & ACCOLADES</label>
+            <textarea id="formMessage" class="form-textarea" rows="4" placeholder="Detail your competitive rank, career prize earnings, social handles, or partnership proposal..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-ln btn-ln-primary" style="width: 100%; margin-top: 1rem;">
+            <span class="btn-roll-text" data-text="TRANSMIT APPLICATION">
+              <span>TRANSMIT APPLICATION</span>
+            </span>
+          </button>
+
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- --------------------------------------------------------------------------
+       10. MASKED LANDO NORRIS FOOTER
+       -------------------------------------------------------------------------- -->
+  <footer class="ln-footer">
+    <div class="container">
+      
+      <div class="footer-top-row">
+        <div>
+          <div class="ln-brand" style="margin-bottom: 1rem;">
+            <img src="assets/images/7ven-brand-mark.png" alt="7VEN Crest" class="ln-brand-logo">
+            <span class="ln-brand-title">7VEN</span>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--color--grey-on-track); max-width: 380px;">
+            Sovereign home for modern esports, entertainment, and high-velocity motorsport streetwear.
+          </p>
+        </div>
+
+        <div class="footer-social-links">
+          <a href="https://discord.gg/7ven" target="_blank" rel="noopener" class="footer-social-item">Discord</a>
+          <a href="https://twitter.com/7venclub" target="_blank" rel="noopener" class="footer-social-item">Twitter / X</a>
+          <a href="https://instagram.com/7venclub" target="_blank" rel="noopener" class="footer-social-item">Instagram</a>
+          <a href="https://youtube.com/@7venclub" target="_blank" rel="noopener" class="footer-social-item">YouTube</a>
+          <a href="https://tiktok.com/@7venclub" target="_blank" rel="noopener" class="footer-social-item">TikTok</a>
+        </div>
+      </div>
+
+      <!-- Massive Watermark Brand Typo -->
+      <div class="footer-huge-mark" aria-hidden="true">
+        7VEN.CLUB
+      </div>
+
+      <div class="footer-bottom-row">
+        <div>
+          © 2026 CLUB 7VEN INC. ALL RIGHTS RESERVED. // REDEFINED IN LN4 MOTORSPORT SPECIFICATION.
+        </div>
+        <div style="display: flex; gap: 2rem;">
+          <a href="#hero" style="color: var(--color--lime); font-weight: 700;">BACK TO TOP ↑</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- --------------------------------------------------------------------------
+       11. INTERACTIVE CART DRAWER
+       -------------------------------------------------------------------------- -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay" aria-hidden="true">
+    <div class="cart-drawer" role="dialog" aria-label="Shopping Cart">
+      
+      <div class="cart-head">
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <span class="text-eyebrow">// CART HUD</span>
+          <span class="text-h4">YOUR VAULT</span>
+        </div>
+        <button class="cart-close-btn" id="cartClose" aria-label="Close Shopping Cart">✕</button>
+      </div>
+
+      <div class="cart-body" id="cartItemsList">
+        <!-- Rendered dynamically by JS -->
+      </div>
+
+      <div class="cart-foot">
+        <div class="cart-total-row">
+          <span class="text-mono" style="color: var(--color--grey-on-track); font-size: 0.85rem;">SUBTOTAL</span>
+          <span class="text-h3" id="cartTotalDisplay" style="color: var(--color--lime);">$0.00</span>
+        </div>
+        <button class="btn-ln btn-ln-primary" id="checkoutBtn" style="width: 100%;">
+          <span class="btn-roll-text" data-text="PROCEED TO CHECKOUT">
+            <span>PROCEED TO CHECKOUT</span>
+          </span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- --------------------------------------------------------------------------
+       12. INTERACTIVE VAULT SPEC MODAL
+       -------------------------------------------------------------------------- -->
+  <div class="vault-modal-overlay" id="vaultModal" role="dialog" aria-label="Gear Specification Modal">
+    <div class="vault-modal-card">
+      <button class="vault-modal-close" id="vaultModalClose" aria-label="Close Specification Modal">✕</button>
+      
+      <div class="vault-modal-media">
+        <img src="assets/images/vault-helmet.jpg" alt="Selected Gear" id="modalVaultImg">
+      </div>
+
+      <div class="vault-modal-info">
+        <div>
+          <span class="badge-pill is-live" id="modalVaultSerial">SPEC-7V-HELM-04</span>
+          <h3 class="text-h3" id="modalVaultTitle" style="margin: 1rem 0 0.5rem 0;">CYBER STRIKE '26</h3>
+          <div class="text-mono" id="modalVaultSpec" style="color: var(--color--lime); font-size: 0.8rem; margin-bottom: 1.5rem;">
+            WEIGHT: 1,240G | SHELL: MULTI-AXIAL CARBON | AERO VISOR: LIME IRIDIUM
+          </div>
+          <p class="text-lead" id="modalVaultDesc" style="font-size: 0.95rem;">
+            Forged for high-velocity focus under intense championship pressure. Features acoustic noise isolation for LAN arenas, integrated biometric sensors, and custom 7VEN livery decals with reflective lime trim.
+          </p>
+        </div>
+
+        <div style="margin-top: 2rem;">
+          <a href="#store" class="btn-ln btn-ln-primary" onclick="document.getElementById('vaultModal').classList.remove('open');">
+            <span class="btn-roll-text" data-text="VIEW IN STORE">
+              <span>VIEW IN STORE</span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- --------------------------------------------------------------------------
+       13. HUD TOAST NOTIFICATION
+       -------------------------------------------------------------------------- -->
+  <div class="toast-hud" id="hudToast" role="status" aria-live="polite">
+    <span class="live-dot"></span>
+    <span class="toast-text">7VEN TELEMETRY ONLINE</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
