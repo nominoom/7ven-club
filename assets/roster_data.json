@@ -1,0 +1,781 @@
+[
+  {
+    "name": "7VEN jeff",
+    "displayName": "jeff",
+    "slug": "jeff",
+    "image": "assets/images/roster/jeff.jpg",
+    "originalUrl": "https://framerusercontent.com/images/5BoI7DogBywSMxWuc4RB25yo.jpeg?width=2048&height=1152",
+    "role": "Competitive Pro",
+    "division": "Fortnite",
+    "region": "Global",
+    "earnings": "$0",
+    "bio": "Jeff is the founder and President of 7VEN. Gaming became an escape early in his life and eventually turned into the world he wanted to build around himself. Never interested in following the traditional route, Jeff developed an online personality through comedy, gaming, livestreaming and internet culture before creating 7VEN. His vision for the organization goes beyond winning tournaments. Jeff wants 7VEN to feel unpredictable, entertaining and culturally different from a traditional esports team. He oversees the bigger picture, talent, partnerships, creative direction and the constant evolution of the brand.",
+    "socials": {
+      "twitch": null,
+      "twitter": "https://x.com/jeff",
+      "instagram": "https://instagram.com/jeff",
+      "youtube": null,
+      "tiktok": null
+    }
+  },
+  {
+    "name": "7VEN 60k60",
+    "displayName": "60k60",
+    "slug": "60k60",
+    "image": "assets/images/roster/60k60.jpg",
+    "originalUrl": "https://framerusercontent.com/images/tJ1bhH6F5a9axIH8UFzO4Ty7V0.png?width=1206&height=768",
+    "role": "Competitive Pro",
+    "division": "Fortnite",
+    "region": "Global",
+    "earnings": "$0",
+    "bio": "60K60 is Vice President of 7VEN and leads the organization's VALORANT division. Originally from Chicago, he later moved to Romania for school while continuing to grind within gaming and esports. He brings a competitive mindset, loyalty and consistency to the organization, helping build teams while working closely with leadership on the direction of 7VEN. Whether it is VALORANT, management or something behind the scenes, 60K has become one of the people trusted to keep things moving.",
+    "socials": {
+      "twitch": null,
+      "twitter": "https://x.com/60k60",
+      "instagram": "https://instagram.com/60k60",
+      "youtube": null,
+      "tiktok": null
+    }
+  },
+  {
+    "name": "7VEN EMO",
+    "displayName": "EMO",
+    "slug": "emo",
+    "image": "assets/images/roster/emo.jpg",
+    "originalUrl": "https://framerusercontent.com/images/3llbJiryypwkOk3eqJipbkoIHng.png?width=1448&height=1086",
+    "role": "Ruler",
+    "division": "Leadership",
+    "region": "Global",
+    "earnings": "$0",
+    "bio": "Emo is one of the Rulers of 7VEN and someone who understands the bigger vision behind the organization. Growing up in New York around gaming, internet culture and alternative fashion helped shape the personality and perspective he brings to the team. He sees 7VEN as more than just jerseys and tournament placements. Emo helps shape the atmosphere, ideas and identity surrounding the organization while bringing his own alternative style and personality into the mix.",
+    "socials": {
+      "twitch": null,
+      "twitter": "https://x.com/emo",
+      "instagram": "https://instagram.com/emo",
+      "youtube": null,
+      "tiktok": null
+    }
+  },
+  {
+    "name": "7VEN CECXI",
+    "displayName": "CECXI",
+    "slug": "cecxi",
+    "image": "assets/images/roster/cecxi.jpg",
+    "originalUrl": "https://framerusercontent.com/images/IzxIE3jt2n3QLOvcCvfXlHowA.png?width=1086&height=1448",
+    "role": "Ruler",
+    "division": "Leadership",
+    "region": "Global",
+    "earnings": "$0",
+    "bio": "Cecxi is a Ruler within 7VEN who brings discipline, reliability and a calm personality to the organization. Coming from a military background, he understands structure and responsibility, but never takes himself too seriously. He is the type of person who can jump into almost anything when needed, help solve a problem and keep things moving without needing the spotlight. Around 7VEN, Cecxi has become known as someone who is easy to work with, dependable and always down to help.",
+    "socials": {
+      "twitch": null,
+      "twitter": "https://x.com/cecxi",
+      "instagram": "https://instagram.com/cecxi",
+      "youtube": null,
+      "tiktok": null
+    }
+  },
+  {
+    "name": "7VEN ANXIOUS",
+    "displayName": "ANXIOUS",
+    "slug": "anxious",
+    "image": "assets/images/roster/anxious.jpg",
+    "originalUrl": "https://framerusercontent.com/images/I2zPu7dUBmcWefGGUUTw1C9g.png?width=1189&height=768",
+    "role": "Ruler",
+    "division": "Leadership",
+    "region": "Global",
+    "earnings": "$0",
+    "bio": "Anxious is a Ruler of 7VEN and one of the steady personalities behind the organization. As a father, he brings a different perspective to the group, balancing gaming, responsibility and real life while still being heavily involved in the community. He is known for being genuine, supportive and easy to talk to. Anxious represents the side of 7VEN that values the people behind the usernames just as much as what happens inside the game.",
+    "socials": {
+      "twitch": null,
+      "twitter": "https://x.com/anxious",
+      "instagram": "https://instagram.com/anxious",
+      "youtube": null,
+      "tiktok": null
+    }
+  },
+  {
+    "name": "7VEN MORPH3US",
+    "displayName": "MORPH3US",
+    "slug": "morph3us",
+    "image": "assets/images/roster/morph3us.jpg",
+    "originalUrl": "https://framerusercontent.com/images/XwDkFtbZOLAcxer0nGjop5EKrw.png?width=900&height=541",
+    "role": "Ruler",
+    "division": "Leadership",
+    "region": "CAN",
+    "earnings": "$0",
+    "bio": "MoRpH3uS is a Canadian Ruler within 7VEN who brings experience, perspective and a laid-back personality to the organization. As one of the older heads around the community, he is someone people can talk to when they need advice or another point of view. He brings a calm presence to an organization that can sometimes move at a hundred miles an hour.",
+    "socials": {
+      "twitch": null,
+      "twitter": "https://x.com/morph3us",
+      "instagram": "https://instagram.com/morph3us",
+      "youtube": null,
+      "tiktok": null
+    }
+  },
+  {
+    "name": "7VEN JR6",
+    "displayName": "JR6",
+    "slug": "jr6",
+    "image": "assets/images/roster/jr6.jpg",
+    "originalUrl": "https://framerusercontent.com/images/SVFyHLgMlHMnyySgQZisfQ5T2g.png?width=1672&height=941",
+    "role": "Executive Assistant",
+    "division": "Leadership",
+    "region": "Global",
+    "earnings": "$0",
+    "bio": "JR6 is an Executive Assistant at 7VEN, helping keep the organization organized and moving forward behind the scenes. He supports day-to-day operations, works with the team on new opportunities, and helps turn ideas into action. He also plays an active role in 7VEN’s Discord community, connecting with members, supporting community initiatives, and helping make the space welcoming and engaging. Whether he’s coordinating details for the team or helping someone in the community, JR6 brings consistency, initiative, and a willingness to step in wherever he’s needed.",
+    "socials": {
+      "twitch": null,
+      "twitter": "https://x.com/jr6",
+      "instagram": "https://instagram.com/jr6",
+      "youtube": null,
+      "tiktok": null
+    }
+  },
+  {
+    "name": "7VEN Avivv",
+    "displayName": "Avivv",
+    "slug": "avivv",
+    "image": "assets/images/roster/avivv.jpg",
+    "originalUrl": "https://framerusercontent.com/images/D1uztrxkEilRLDFsarHpDz14M.png?width=1364&height=682",
+    "role": "Pro Fortnite Player",
+    "division": "Fortnite",
+    "region": "NA-C",
+    "earnings": "$226,860",
+    "bio": "Avivv is one of the most experienced and accomplished competitors on the 7VEN Fortnite roster. With more than $226,000 in tracked career earnings and nearly one million lifetime power ranking points, he brings elite tournament experience to the organization.",
+    "socials": {
+      "twitch": null,
+      "twitter": "https://x.com/avivv",
+      "instagram": "https://instagram.com/avivv",
+      "youtube": null,
+      "tiktok": null
+    }
+  },
+  {
+    "name": "7VEN GMONEY",
+    "displayName": "GMONEY",
+    "slug": "gmoney",
+    "image": "assets/images/roster/gmoney.jpg",
+    "originalUrl": "https://framerusercontent.com/images/PMr7rF2rrRHrgxbcpSBnLShhQ.png?width=1364&height=675",
+    "role": "Pro Fortnite Player",
+    "division": "Fortnite",
+    "region": "NA-C",
+    "earnings": "$57,550",
+    "bio": "GMoney is an established North American Fortnite competitor and one of the leading players on 7VEN’s competitive roster. With years of tournament experience and more than $57,000 in tracked career earnings, he continues to compete among the region’s strongest players.",
+    "socials": {
+      "twitch": null,
+      "twitter": "https://x.com/gmoney",
+      "instagram": "https://instagram.com/gmoney",
+      "youtube": null,
+      "tiktok": null
+    }
+  },
+  {
+    "name": "7VEN TYLER ZUBER",
+    "displayName": "TYLER ZUBER",
+    "slug": "tyler-zuber",
+    "image": "assets/images/roster/tyler-zuber.jpg",
+    "originalUrl": "https://framerusercontent.com/images/uhXKJtM7QXN5P8ainjkckoBrNOA.png?width=1364&height=686",
+    "role": "Major League Baseball Pitcher",
+    "division": "Athletes & Sports",
+    "region": "USA",
+    "earnings": "$0",
+    "bio": "Tyler Zuber is an American professional baseball pitcher who has competed at the highest level of the sport in Major League Baseball. Known for his powerful fastball and competitive mentality on the mound, Zuber built his reputation as a reliable relief pitcher and high-level athlete. Zuber’s professional experience and dedication to performance make him a valuable representative of 7VEN, bringing elite athletic discipline and professionalism to the organization.",
+    "socials": {
+      "twitch": null,
+      "twitter": "https://x.com/tyler-zuber",
+      "instagram": "https://instagram.com/tyler-zuber",
+      "youtube": null,
+      "tiktok": null
+    }
+  },
+  {
+    "name": "7VEN Icecreamman",
+    "displayName": "Icecreamman",
+    "slug": "icecreamman",
+    "image": "assets/images/roster/icecreamman.jpg",
+    "originalUrl": "https://framerusercontent.com/images/qwnhhtb4pL9PMuZCQNQIdwXNqg.png?width=1364&height=684",
+    "role": "NFL Cornerback (Oakland Raiders)",
+    "division": "Athletes & Sports",
+    "region": "Global",
+    "earnings": "$0",
+    "bio": "Keith McGill, also known as “7VEN IceCreamMan,” is a former football player who played cornerback for the Oakland Raiders in the National Football League. He played college football at Utah State University before being selected in the 2014 NFL Draft. Known for his size and athleticism at cornerback, McGill later built his own personal brand under the name 7VEN IceCreamMan.",
+    "socials": {
+      "twitch": null,
+      "twitter": "https://x.com/icecreamman",
+      "instagram": "https://instagram.com/icecreamman",
+      "youtube": null,
+      "tiktok": null
+    }
+  },
+  {
+    "name": "7VEN BLAKE SCIORTINO",
+    "displayName": "BLAKE SCIORTINO",
+    "slug": "blake-sciortino",
+    "image": "assets/images/roster/blake-sciortino.jpg",
+    "originalUrl": "https://framerusercontent.com/images/M3U8Pc3VTM2APKKVtyCJzJx41gA.png?width=1193&height=768",
+    "role": "Actor, Model & Creative Lead",
+    "division": "Creators & Film",
+    "region": "Global",
+    "earnings": "$0",
+    "bio": "Blake Sciortino is an actor, model, and bodybuilder with a background in entertainment and fitness. He has appeared on MTV and has worked as a model for major brands like Adidas and Under Armour. Known for combining fitness, fashion, and media, Sciortino has built his 7VEN identity through modeling, acting, and his presence in the fitness industry.",
+    "socials": {
+      "twitch": null,
+      "twitter": "https://x.com/blake-sciortino",
+      "instagram": "https://instagram.com/blake-sciortino",
+      "youtube": null,
+      "tiktok": null
+    }
+  },
+  {
+    "name": "7VEN 618AMG",
+    "displayName": "618AMG",
+    "slug": "618amg",
+    "image": "assets/images/roster/618amg.jpg",
+    "originalUrl": "https://framerusercontent.com/images/e3CUl1ctF5YxU4AjKkN6ZeU7bI.png?width=1364&height=683",
+    "role": "Music Artist & Producer",
+    "division": "Music & Culture",
+    "region": "Global",
+    "earnings": "$0",
+    "bio": "7VEN 618AMG is a music artist who releases his work on YouTube. His music blends modern hip-hop and melodic styles while building a growing online audience. Under the name  618AMG, he focuses on independent releases and digital platforms to share his sound and develop his presence as an emerging artist.",
+    "socials": {
+      "twitch": null,
+      "twitter": "https://x.com/618amg",
+      "instagram": "https://instagram.com/618amg",
+      "youtube": "https://youtube.com/@618amg",
+      "tiktok": null
+    }
+  },
+  {
+    "name": "7VEN LIZ",
+    "displayName": "LIZ",
+    "slug": "liz",
+    "image": "assets/images/roster/liz.jpg",
+    "originalUrl": "https://framerusercontent.com/images/kOKz3YnoK9PrqXJS8fVDm3C9Gtg.png?width=2048&height=1152",
+    "role": "Competitive Pro",
+    "division": "Fortnite",
+    "region": "Global",
+    "earnings": "$0",
+    "bio": "7VEN Liz is a rising female pro gamer known for her relentless grind and dominant in-game presence. She has built a reputation as a high-level competitor who consistently sharpens her mechanics and puts in long hours to stay at the top of her game. Her dedication to improvement and strong performance in competitive matches make her a formidable player in the esports scene. Liz qualified for the LAN stage of the Milk Cup, a competitive tournament featuring top teams and a significant prize pool. After securing her spot, she traveled to California to compete in person against other elite players.",
+    "socials": {
+      "twitch": null,
+      "twitter": "https://x.com/liz",
+      "instagram": "https://instagram.com/liz",
+      "youtube": null,
+      "tiktok": null
+    }
+  },
+  {
+    "name": "7VEN DOLO",
+    "displayName": "DOLO",
+    "slug": "dolo",
+    "image": "assets/images/roster/dolo.jpg",
+    "originalUrl": "https://framerusercontent.com/images/8ABiMhWaYmcuIPUzWJ0t0BkNI.png?width=1600&height=900",
+    "role": "Competitive Pro",
+    "division": "Fortnite",
+    "region": "Global",
+    "earnings": "$0",
+    "bio": "7VEN Dolo is a rising female pro gamer recognized for her creative and strategic approach to competition. Rather than relying purely on mechanics, she stands out for her smart plays, tactical awareness, and unique approaches that allow her to outplay opponents in unexpected ways. Just like her duo 7VEN Liz, Dolo also qualified for the LAN stage of the Milk Cup, a competitive tournament with a significant prize pool for top teams. After earning her place in the event, she traveled to California to compete in person against other top competitors.",
+    "socials": {
+      "twitch": null,
+      "twitter": "https://x.com/dolo",
+      "instagram": "https://instagram.com/dolo",
+      "youtube": null,
+      "tiktok": null
+    }
+  },
+  {
+    "name": "7VEN KAIRI",
+    "displayName": "KAIRI",
+    "slug": "kairi",
+    "image": "assets/images/roster/kairi.jpg",
+    "originalUrl": "https://framerusercontent.com/images/N7CsvHvBHWo7g71WCXKRTtyqs.jpg?width=6960&height=4640",
+    "role": "Pro Fortnite Player",
+    "division": "Fortnite",
+    "region": "EU",
+    "earnings": "$86,565",
+    "bio": "Cringe is a Swiss Fortnite professional competing in the European region. Known for consistently performing at a high competitive level, he has accumulated more than $86,000 in tracked career earnings and has represented 7VEN at the highest levels of Fortnite competition.",
+    "socials": {
+      "twitch": null,
+      "twitter": "https://x.com/kairi",
+      "instagram": "https://instagram.com/kairi",
+      "youtube": null,
+      "tiktok": null
+    }
+  },
+  {
+    "name": "7VEN KAIRI",
+    "displayName": "KAIRI",
+    "slug": "kairi",
+    "image": "assets/images/roster/kairi.jpg",
+    "originalUrl": "https://framerusercontent.com/images/mlj7a0hBdqoofcVCrFzlhrYY8w.png?width=1364&height=681",
+    "role": "Competitive Pro",
+    "division": "Fortnite",
+    "region": "Global",
+    "earnings": "$0",
+    "bio": "",
+    "socials": {
+      "twitch": null,
+      "twitter": "https://x.com/kairi",
+      "instagram": "https://instagram.com/kairi",
+      "youtube": null,
+      "tiktok": null
+    }
+  },
+  {
+    "name": "7VEN KAIRI",
+    "displayName": "KAIRI",
+    "slug": "kairi",
+    "image": "assets/images/roster/kairi.jpg",
+    "originalUrl": "https://framerusercontent.com/images/mlj7a0hBdqoofcVCrFzlhrYY8w.png?width=1364&height=681",
+    "role": "Competitive Pro",
+    "division": "Fortnite",
+    "region": "Global",
+    "earnings": "$0",
+    "bio": "",
+    "socials": {
+      "twitch": null,
+      "twitter": "https://x.com/kairi",
+      "instagram": "https://instagram.com/kairi",
+      "youtube": null,
+      "tiktok": null
+    }
+  },
+  {
+    "name": "7VEN CRINGE",
+    "displayName": "CRINGE",
+    "slug": "cringe",
+    "image": "assets/images/roster/cringe.jpg",
+    "originalUrl": "https://framerusercontent.com/images/uVIDEgKldpXVkbZ46JqGRbS8w8c.jpg?width=5853&height=3499",
+    "role": "Pro Fortnite Player",
+    "division": "Fortnite",
+    "region": "EU",
+    "earnings": "$86,565",
+    "bio": "Cringe is a Swiss Fortnite professional competing in the European region. Known for consistently performing at a high competitive level, he has accumulated more than $86,000 in tracked career earnings and has represented 7VEN at the highest levels of Fortnite competition.",
+    "socials": {
+      "twitch": null,
+      "twitter": "https://x.com/cringe",
+      "instagram": "https://instagram.com/cringe",
+      "youtube": null,
+      "tiktok": null
+    }
+  },
+  {
+    "name": "7VEN kirillian",
+    "displayName": "kirillian",
+    "slug": "kirillian",
+    "image": "assets/images/roster/kirillian.jpg",
+    "originalUrl": "https://framerusercontent.com/images/l94n6UuCosaAOzekJ9O3PfxoQgo.jpg?width=2730&height=1820",
+    "role": "Pro Fortnite Player",
+    "division": "Fortnite",
+    "region": "NA-C",
+    "earnings": "$20,925",
+    "bio": "Kirillian is a highly ranked Fortnite competitor representing 7VEN in North America Central. He has built a strong competitive resume through FNCS and other major Fortnite events, earning more than $20,000 throughout his career.",
+    "socials": {
+      "twitch": null,
+      "twitter": "https://x.com/kirillian",
+      "instagram": "https://instagram.com/kirillian",
+      "youtube": null,
+      "tiktok": null
+    }
+  },
+  {
+    "name": "7VEN seven",
+    "displayName": "seven",
+    "slug": "seven",
+    "image": "assets/images/roster/seven.jpg",
+    "originalUrl": "https://framerusercontent.com/images/7JkyvHNvFsul9qmGc7TLHCuPp48.png?width=1031&height=1525",
+    "role": "Pro Fortnite Player",
+    "division": "Fortnite",
+    "region": "BR",
+    "earnings": "$13,990",
+    "bio": "Seven is a Brazilian Fortnite professional representing 7VEN in one of Fortnite’s fastest growing competitive regions. He has earned nearly $14,000 in tracked prize money and continues to establish himself as one of the organization’s top international players.",
+    "socials": {
+      "twitch": null,
+      "twitter": "https://x.com/seven",
+      "instagram": "https://instagram.com/seven",
+      "youtube": null,
+      "tiktok": null
+    }
+  },
+  {
+    "name": "7VEN thorik",
+    "displayName": "thorik",
+    "slug": "thorik",
+    "image": "assets/images/roster/thorik.jpg",
+    "originalUrl": "https://framerusercontent.com/images/da1T1B0NEwkHmq5k5wWLI7BtA0.png?width=1855&height=848",
+    "role": "FNCS Champion",
+    "division": "Fortnite",
+    "region": "NA-W",
+    "earnings": "$31,000",
+    "bio": "Thorik is an American Fortnite champion and creator representing 7VEN Club. He won FNCS Major 1 NA West in 2023 alongside Boltz, securing $31,000 in combined prize money and defeating runners-up Pollo and Defiable by just four points. That championship earned the duo a place at the 2023 FNCS Global Championship in Copenhagen**, where they advanced through the Upper Bracket to compete in the Grand Finals of the $4 million event. From winning a regional FNCS title to competing on Fortnite’s international stage, Thorik brings championship experience to 7VEN’s gaming and creator roster.",
+    "socials": {
+      "twitch": null,
+      "twitter": "https://x.com/thorik",
+      "instagram": "https://instagram.com/thorik",
+      "youtube": null,
+      "tiktok": null
+    }
+  },
+  {
+    "name": "7VEN sxhool",
+    "displayName": "sxhool",
+    "slug": "sxhool",
+    "image": "assets/images/roster/sxhool.jpg",
+    "originalUrl": "https://framerusercontent.com/images/sgcRUR6YacNd6hykXHCysaOx4.png?width=1536&height=1024",
+    "role": "FNCS Champion",
+    "division": "Fortnite",
+    "region": "NA-W",
+    "earnings": "$54,400",
+    "bio": "Sxhool is an American Fortnite competitor and creator representing 7VEN Club, with $54,400 in recorded tournament earnings. His standout 2025 season included winning FNCS Major 2 NA West alongside Ark and Salko, earning the trio $45,000 and securing their place at the Global Championship. He followed that with second place at FNCS Major 3 NA West and 19th at the FNCS Global Championship in Lyon. His results also include a first-place finish in the Chapter 6 Season 4 FNCS Divisional Practice Cup, Week 1, and third place in Week 3. With an FNCS title, multiple podium finishes, and international LAN experience, Sxhool brings a proven competitive record to 7VEN.",
+    "socials": {
+      "twitch": null,
+      "twitter": "https://x.com/sxhool",
+      "instagram": "https://instagram.com/sxhool",
+      "youtube": null,
+      "tiktok": null
+    }
+  },
+  {
+    "name": "7VEN stephanie de pena",
+    "displayName": "stephanie de pena",
+    "slug": "stephanie-de-pena",
+    "image": "assets/images/roster/stephanie-de-pena.jpg",
+    "originalUrl": "https://framerusercontent.com/images/7lsgwsorKnxTqIWdq83wyeR0h0.png?width=850&height=459",
+    "role": "FNCS Champion",
+    "division": "Fortnite",
+    "region": "NA-W",
+    "earnings": "$54,400",
+    "bio": "Sxhool is an American Fortnite competitor and creator representing 7VEN Club, with $54,400 in recorded tournament earnings. His standout 2025 season included winning FNCS Major 2 NA West alongside Ark and Salko, earning the trio $45,000 and securing their place at the Global Championship. He followed that with second place at FNCS Major 3 NA West and 19th at the FNCS Global Championship in Lyon. His results also include a first-place finish in the Chapter 6 Season 4 FNCS Divisional Practice Cup, Week 1, and third place in Week 3. With an FNCS title, multiple podium finishes, and international LAN experience, Sxhool brings a proven competitive record to 7VEN.",
+    "socials": {
+      "twitch": null,
+      "twitter": "https://x.com/stephanie-de-pena",
+      "instagram": "https://instagram.com/stephanie-de-pena",
+      "youtube": null,
+      "tiktok": null
+    }
+  },
+  {
+    "name": "7VEN batmanick",
+    "displayName": "batmanick",
+    "slug": "batmanick",
+    "image": "assets/images/roster/batmanick.jpg",
+    "originalUrl": "https://framerusercontent.com/images/iJGuSKiaYo9gYO3DPupKCWGYNs.png?width=1122&height=1402",
+    "role": "Pro Fortnite Player",
+    "division": "Fortnite",
+    "region": "NA-C",
+    "earnings": "$3,190",
+    "bio": "BatmaNick is a North American Fortnite competitor who joined 7VEN in 2026. With more than $3,000 in tracked career earnings, he continues to develop as a competitive player while representing the organization across major Fortnite events.",
+    "socials": {
+      "twitch": null,
+      "twitter": "https://x.com/batmanick",
+      "instagram": "https://instagram.com/batmanick",
+      "youtube": null,
+      "tiktok": null
+    }
+  },
+  {
+    "name": "7VEN CECE",
+    "displayName": "CECE",
+    "slug": "cece",
+    "image": "assets/images/roster/cece.jpg",
+    "originalUrl": "https://framerusercontent.com/images/kZRXBFhqn8CVGjZ8NPak0Vtg.png?width=971&height=1619",
+    "role": "Pro Fortnite Player",
+    "division": "Fortnite",
+    "region": "Global",
+    "earnings": "$20,000+",
+    "bio": "Twitch Partner • 20K+ Competitive Earnings • 60K+ TikTok Cece is a professional women’s Fortnite competitor and content creator representing 7VEN. She has earned more than $20,000 across women’s competitive gaming, qualified for multiple LAN events, and won a Milk Cup Major qualifier. Alongside competition, Cece has built a strong multi-platform community across Twitch, TikTok, YouTube, Instagram and X.",
+    "socials": {
+      "twitch": "https://twitch.tv/cece",
+      "twitter": "https://x.com/cece",
+      "instagram": "https://instagram.com/cece",
+      "youtube": "https://youtube.com/@cece",
+      "tiktok": "https://tiktok.com/@cece"
+    }
+  },
+  {
+    "name": "7VEN HEARTZKAITT",
+    "displayName": "HEARTZKAITT",
+    "slug": "heartzkaitt",
+    "image": "assets/images/roster/heartzkaitt.jpg",
+    "originalUrl": "https://framerusercontent.com/images/s1JqAUQJOxwDEIuFTD1NZ4oeb4.png?width=1619&height=972",
+    "role": "Pro Fortnite Player",
+    "division": "Fortnite",
+    "region": "Global",
+    "earnings": "$1,750+",
+    "bio": "Twitch Partner • $1,750+ Tracked Earnings • Top Ranked Zero Build Player Heartzkaitt is a competitive Fortnite player and creator representing 7VEN. She has established herself as one of the strongest console Zero Build competitors in North America, reaching the top of the U.S. NAC Zero Build rankings during 2026. With tournament wins, official Fortnite event placements and a growing presence across Twitch, YouTube and social media, she brings both competitive performance and content to 7VEN.",
+    "socials": {
+      "twitch": "https://twitch.tv/heartzkaitt",
+      "twitter": "https://x.com/heartzkaitt",
+      "instagram": "https://instagram.com/heartzkaitt",
+      "youtube": "https://youtube.com/@heartzkaitt",
+      "tiktok": null
+    }
+  },
+  {
+    "name": "7VEN screen",
+    "displayName": "screen",
+    "slug": "screen",
+    "image": "assets/images/roster/screen.jpg",
+    "originalUrl": "https://framerusercontent.com/images/uWznchzQkMwCxi0EuQM33VX6cU.png?width=1254&height=1254",
+    "role": "Pro Fortnite Player",
+    "division": "Fortnite",
+    "region": "Global",
+    "earnings": "$0",
+    "bio": "Twitch Partner • YouTube Creator • Competitive Fortnite Screen is a Twitch Partner, YouTube creator and competitive Fortnite player representing 7VEN. Known for Fortnite and Zero Build content, Screen combines livestreaming and video content with competitive play, building an established community across Twitch, YouTube and social media while continuing to compete in official Fortnite events.",
+    "socials": {
+      "twitch": "https://twitch.tv/screen",
+      "twitter": "https://x.com/screen",
+      "instagram": "https://instagram.com/screen",
+      "youtube": "https://youtube.com/@screen",
+      "tiktok": null
+    }
+  },
+  {
+    "name": "7VEN PARCA",
+    "displayName": "PARCA",
+    "slug": "parca",
+    "image": "assets/images/roster/parca.jpg",
+    "originalUrl": "https://framerusercontent.com/images/eX6Ncy9faT6V4ngrCHnYh8G8K80.png?width=1086&height=1448",
+    "role": "Pro Fortnite Player",
+    "division": "Fortnite",
+    "region": "EU",
+    "earnings": "$0",
+    "bio": "Parca is a European Fortnite competitor and content creator representing 7VEN. With years of competitive experience, Parca combines high-level Fortnite gameplay with content creation and continues to represent the organization across tournaments and social platforms.",
+    "socials": {
+      "twitch": null,
+      "twitter": "https://x.com/parca",
+      "instagram": "https://instagram.com/parca",
+      "youtube": null,
+      "tiktok": null
+    }
+  },
+  {
+    "name": "7VEN pardal",
+    "displayName": "pardal",
+    "slug": "pardal",
+    "image": "assets/images/roster/pardal.jpg",
+    "originalUrl": "https://framerusercontent.com/images/rDg4S6qA1SgWjy0ih1lgLDRLKcA.png?width=941&height=1672",
+    "role": "Pro Fortnite Player",
+    "division": "Fortnite",
+    "region": "BR",
+    "earnings": "$0",
+    "bio": "Pardal is a Brazilian professional Fortnite player representing 7VEN on the competitive stage. Coming from Brazil's highly competitive Fortnite scene, Pardal brings confidence, mechanics and LAN experience to the roster. His signing represents 7VEN's continued investment into Brazilian Fortnite and the next generation of international competitors.",
+    "socials": {
+      "twitch": null,
+      "twitter": "https://x.com/pardal",
+      "instagram": "https://instagram.com/pardal",
+      "youtube": null,
+      "tiktok": null
+    }
+  },
+  {
+    "name": "7VEN shewolf",
+    "displayName": "shewolf",
+    "slug": "shewolf",
+    "image": "assets/images/roster/shewolf.jpg",
+    "originalUrl": "https://framerusercontent.com/images/m7zxhmNtggkK1kVQVKuVHn9XTHw.png?width=1024&height=1536",
+    "role": "Twitch Partner & Creator",
+    "division": "Content Creators",
+    "region": "Global",
+    "earnings": "$0",
+    "bio": "SheWolf is a Twitch Partner and gaming creator who brings personality, confidence and community energy to 7VEN. Her content combines gaming with the social side of streaming, creating a space where viewers return as much for the personality as the gameplay. She adds another established creator voice to the growing 7VEN network.",
+    "socials": {
+      "twitch": "https://twitch.tv/shewolf",
+      "twitter": "https://x.com/shewolf",
+      "instagram": "https://instagram.com/shewolf",
+      "youtube": null,
+      "tiktok": null
+    }
+  },
+  {
+    "name": "7VEN ronny",
+    "displayName": "ronny",
+    "slug": "ronny",
+    "image": "assets/images/roster/ronny.jpg",
+    "originalUrl": "https://framerusercontent.com/images/tuJH3AsTO3ZLR9tIdeKBcvzW11Y.png?width=1672&height=941",
+    "role": "Twitch Partner & Creator",
+    "division": "Content Creators",
+    "region": "Global",
+    "earnings": "$0",
+    "bio": "Ronny is a Twitch Partner and content creator representing 7VEN. Known for being entertaining, social and comfortable in front of an audience, Ronny brings an established streaming presence into the organization. His personality fits naturally into 7VEN's focus on making gaming content feel fun rather than overly polished or corporate.",
+    "socials": {
+      "twitch": "https://twitch.tv/ronny",
+      "twitter": "https://x.com/ronny",
+      "instagram": "https://instagram.com/ronny",
+      "youtube": null,
+      "tiktok": null
+    }
+  },
+  {
+    "name": "7VEN floppy",
+    "displayName": "floppy",
+    "slug": "floppy",
+    "image": "assets/images/roster/floppy.jpg",
+    "originalUrl": "https://framerusercontent.com/images/f5gstb9Mk4w8EMslEHBJSwL4Y.png?width=1580&height=995",
+    "role": "Twitch Partner & Creator",
+    "division": "Content Creators",
+    "region": "Global",
+    "earnings": "$0",
+    "bio": "Floppy is a Twitch Partner and gaming creator bringing another established community into 7VEN. With a natural personality for livestreaming and gaming content, Floppy adds entertainment, interaction and consistency to the creator roster. He represents the type of creator 7VEN wants to build around as the brand expands outside of purely competitive esports.",
+    "socials": {
+      "twitch": "https://twitch.tv/floppy",
+      "twitter": "https://x.com/floppy",
+      "instagram": "https://instagram.com/floppy",
+      "youtube": null,
+      "tiktok": null
+    }
+  },
+  {
+    "name": "7VEN regiioo",
+    "displayName": "regiioo",
+    "slug": "regiioo",
+    "image": "assets/images/roster/regiioo.jpg",
+    "originalUrl": "https://framerusercontent.com/images/faGMax4MINoWw93yplZ9kKdeM.png?width=757&height=883",
+    "role": "Twitch Partner & Creator",
+    "division": "Content Creators",
+    "region": "Global",
+    "earnings": "$0",
+    "bio": "Regiioo is a Spanish-speaking Twitch Partner, content creator and one of the personalities helping build 7VEN's presence within the LATAM community. , Regiioo brings the energy of a host, streamer and entertainer into everything he does. His ability to talk, react and create moments makes him someone who can bring a community together instead of simply broadcasting to one.",
+    "socials": {
+      "twitch": "https://twitch.tv/regiioo",
+      "twitter": "https://x.com/regiioo",
+      "instagram": "https://instagram.com/regiioo",
+      "youtube": null,
+      "tiktok": null
+    }
+  },
+  {
+    "name": "7VEN shizu",
+    "displayName": "shizu",
+    "slug": "shizu",
+    "image": "assets/images/roster/shizu.jpg",
+    "originalUrl": "https://framerusercontent.com/images/7PKnIXsFmy3S4FV9qo7Yyu70.png?width=1672&height=941",
+    "role": "VTuber & Gaming Creator",
+    "division": "Creators & Culture",
+    "region": "Global",
+    "earnings": "$0",
+    "bio": "Shizu is a VTuber and gaming creator bringing a completely different style of content into 7VEN. Through virtual content, gaming and livestreaming, Shizu brings personality and creativity into a format that continues to grow across gaming culture. Shizu represents the experimental side of 7VEN and the belief that gaming personalities do not all need to look the same.",
+    "socials": {
+      "twitch": null,
+      "twitter": "https://x.com/shizu",
+      "instagram": "https://instagram.com/shizu",
+      "youtube": null,
+      "tiktok": null
+    }
+  },
+  {
+    "name": "7VEN ollie",
+    "displayName": "ollie",
+    "slug": "ollie",
+    "image": "assets/images/roster/ollie.jpg",
+    "originalUrl": "https://framerusercontent.com/images/XidEO34MTy6uQgj3Ssqond40vo.jpg?width=1152&height=2048",
+    "role": "Twitch Partner & Creator",
+    "division": "Content Creators",
+    "region": "Global",
+    "earnings": "$0",
+    "bio": "Ollie is a gaming creator known for being funny, easygoing and capable of bringing energy into almost any situation. Whether it is content, community interaction or simply being part of the chaos, Ollie adds another personality-driven creator to the 7VEN roster.",
+    "socials": {
+      "twitch": null,
+      "twitter": "https://x.com/ollie",
+      "instagram": "https://instagram.com/ollie",
+      "youtube": null,
+      "tiktok": null
+    }
+  },
+  {
+    "name": "7VEN zcritic",
+    "displayName": "zcritic",
+    "slug": "zcritic",
+    "image": "assets/images/roster/zcritic.jpg",
+    "originalUrl": "https://framerusercontent.com/images/HNRtHgxdHGmFA1iCqV3vG5vrU.png?width=1448&height=1086",
+    "role": "Twitch Partner & Creator",
+    "division": "Content Creators",
+    "region": "Global",
+    "earnings": "$0",
+    "bio": "zCritic is a Twitch Partner who brings gaming and an appreciation for nature together in his content. His personality extends beyond sitting behind a setup, giving his content a different atmosphere from the typical gaming creator. Whether online or outside, zCritic brings a relaxed and authentic presence into 7VEN.",
+    "socials": {
+      "twitch": "https://twitch.tv/zcritic",
+      "twitter": "https://x.com/zcritic",
+      "instagram": "https://instagram.com/zcritic",
+      "youtube": null,
+      "tiktok": null
+    }
+  },
+  {
+    "name": "7VEN O0vios!",
+    "displayName": "O0vios!",
+    "slug": "o0vios-",
+    "image": "assets/images/roster/o0vios-.jpg",
+    "originalUrl": "https://framerusercontent.com/images/CluM0z1RkI6qj1mrQdl2oqUkRbc.png?width=1580&height=995",
+    "role": "Twitch Partner & Creator",
+    "division": "Content Creators",
+    "region": "Global",
+    "earnings": "$0",
+    "bio": "o0vios! is a creator who brings humor and positivity into the 7VEN community. He is someone who can joke around without losing sight of the people around him, consistently encouraging others and contributing good energy wherever he goes. His personality represents the community-first side of 7VEN.",
+    "socials": {
+      "twitch": null,
+      "twitter": "https://x.com/o0vios-",
+      "instagram": "https://instagram.com/o0vios-",
+      "youtube": null,
+      "tiktok": null
+    }
+  },
+  {
+    "name": "7VEN graygraygg",
+    "displayName": "graygraygg",
+    "slug": "graygraygg",
+    "image": "assets/images/roster/graygraygg.jpg",
+    "originalUrl": "https://framerusercontent.com/images/6QK9wexkKgJRBwQ9A1eXrqpxeM.png?width=1735&height=2529",
+    "role": "Twitch Partner & Creator",
+    "division": "Content Creators",
+    "region": "Global",
+    "earnings": "$0",
+    "bio": "GrayGrayGG is an emerging creator focused on building a genuine community around gaming and entertainment. Still early in the journey, Gray has the personality, consistency and room to grow into something much bigger. 7VEN is about finding talent before everybody else notices, and Gray fits that mentality.",
+    "socials": {
+      "twitch": null,
+      "twitter": "https://x.com/graygraygg",
+      "instagram": "https://instagram.com/graygraygg",
+      "youtube": null,
+      "tiktok": null
+    }
+  },
+  {
+    "name": "7VEN gabo",
+    "displayName": "gabo",
+    "slug": "gabo",
+    "image": "assets/images/roster/gabo.jpg",
+    "originalUrl": "https://framerusercontent.com/images/yxwQ4tgCkcbMoQQiPoADifPfo.png?width=1024&height=1024",
+    "role": "NBA 2K Pro & Creator",
+    "division": "Sports Gaming",
+    "region": "Global",
+    "earnings": "$0",
+    "bio": "7VEN Gabo 19 years old, he is an NBA 2K creator originally from Detroit, Michigan, now living in Chicago, Illinois. He plays forward for 7VEN’s 2K team and has built a community of over 10K followers on TikTok, with some of his NBA 2K skits reaching millions of views on a single video. Beyond creating content and competing, he values the relationships he has built with his teammates, who have become close friends. He looks forward to continuing to grow as a creator, competitor, and member of the 7VEN community.",
+    "socials": {
+      "twitch": null,
+      "twitter": "https://x.com/gabo",
+      "instagram": "https://instagram.com/gabo",
+      "youtube": null,
+      "tiktok": "https://tiktok.com/@gabo"
+    }
+  },
+  {
+    "name": "7VEN kami",
+    "displayName": "kami",
+    "slug": "kami",
+    "image": "assets/images/roster/kami.jpg",
+    "originalUrl": "https://framerusercontent.com/images/xT9D6nM7mz7G9m1GFaVyqnbQfw.png?width=1254&height=1254",
+    "role": "Music Artist & Producer",
+    "division": "Music & Culture",
+    "region": "Global",
+    "earnings": "$0",
+    "bio": "7VEN KAMI is a San Antonio– based content creator, musician, and streamer known for blending gaming, music, and visual storytelling. As a member of 7VEN, he creates content across gaming, esports, music production, and videography, with upcoming projects including SACRICI3.",
+    "socials": {
+      "twitch": null,
+      "twitter": "https://x.com/kami",
+      "instagram": "https://instagram.com/kami",
+      "youtube": "https://youtube.com/@kami",
+      "tiktok": null
+    }
+  }
+]

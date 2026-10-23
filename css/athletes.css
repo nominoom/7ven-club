@@ -1,0 +1,597 @@
+/* ==========================================================================
+   ATHLETES & FAN-OUT EXPANDING DECK STYLES
+   Inspired by Lando Norris's fan-out social card carousel
+   ========================================================================== */
+
+/* --- FAN-OUT CARD SHOWCASE SECTION --- */
+.fan-deck-section {
+  position: relative;
+  padding: 3rem 0 6rem 0;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 30%, rgba(32, 38, 23, 0.45) 0%, var(--color--black) 70%);
+}
+
+.fan-deck-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.fan-deck-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+  height: 520px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1400px;
+}
+
+/* Individual Fan Card */
+.fan-card {
+  position: absolute;
+  width: 250px;
+  height: 390px;
+  border-radius: 36px; /* Smooth rounded squircle curve matching LN4 */
+  overflow: hidden;
+  cursor: pointer;
+  background: #11140e;
+  border: 2px solid rgba(210, 255, 0, 0.16);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+  transform-origin: center 120%;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1),
+              box-shadow 0.5s ease,
+              border-color 0.4s ease,
+              filter 0.4s ease;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.fan-card-img-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: #0d100b;
+}
+
+.fan-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  filter: contrast(1.05) saturate(1.1);
+}
+
+.fan-card-vignette {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(12, 14, 10, 0.85) 75%, #0c0e0a 100%);
+  z-index: 2;
+  transition: opacity 0.4s ease;
+}
+
+.fan-card-badge {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  z-index: 3;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.fan-card-content {
+  position: relative;
+  z-index: 3;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  transform: translateY(10px);
+  transition: transform 0.4s ease;
+}
+
+.fan-card-name {
+  font-family: var(--font-condensed);
+  font-size: 1.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color--white);
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+}
+
+.fan-card-role {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color--lime);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.fan-card-earnings {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--color--white);
+  margin-top: 0.25rem;
+}
+
+.fan-card-hint {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--color--lime);
+  letter-spacing: 0.08em;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: all 0.3s ease;
+}
+
+/* Base Rest Positions for 7 Cards */
+.fan-card[data-index="0"] { transform: translateX(-340px) translateY(42px) rotate(-22deg); z-index: 1; }
+.fan-card[data-index="1"] { transform: translateX(-230px) translateY(20px) rotate(-14deg); z-index: 2; }
+.fan-card[data-index="2"] { transform: translateX(-115px) translateY(6px) rotate(-7deg); z-index: 3; }
+.fan-card[data-index="3"] { transform: translateX(0px) translateY(0px) rotate(0deg); z-index: 4; }
+.fan-card[data-index="4"] { transform: translateX(115px) translateY(6px) rotate(7deg); z-index: 3; }
+.fan-card[data-index="5"] { transform: translateX(230px) translateY(20px) rotate(14deg); z-index: 2; }
+.fan-card[data-index="6"] { transform: translateX(340px) translateY(42px) rotate(22deg); z-index: 1; }
+
+/* --- HOVER EXPANSION (LANDO NORRIS EXPANDING EFFECT) --- */
+.fan-deck-wrapper:hover .fan-card:not(:hover) {
+  filter: brightness(0.7) blur(0.5px);
+}
+
+.fan-card:hover {
+  transform: scale(1.18) translateY(-40px) rotate(0deg) !important;
+  z-index: 30 !important;
+  border-color: var(--color--lime);
+  box-shadow: 0 35px 75px rgba(0, 0, 0, 0.95), 0 0 45px rgba(210, 255, 0, 0.45);
+  filter: brightness(1.05) !important;
+}
+
+.fan-card:hover .fan-card-img {
+  transform: scale(1.08);
+}
+
+.fan-card:hover .fan-card-content {
+  transform: translateY(0);
+}
+
+.fan-card:hover .fan-card-hint {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   FULL ATHLETE DIRECTORY & SEARCH BAR
+   -------------------------------------------------------------------------- */
+
+.roster-directory-section {
+  position: relative;
+  padding: 4rem 0 8rem 0;
+  background: var(--color--black);
+  border-top: 1px solid var(--color--grey-border);
+}
+
+.directory-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.search-box-wrap {
+  position: relative;
+  min-width: 300px;
+  flex: 1;
+  max-width: 480px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.85rem 1.25rem 0.85rem 2.85rem;
+  background: var(--color--dark-surface);
+  border: 1px solid rgba(210, 255, 0, 0.2);
+  border-radius: var(--radius-pill);
+  color: var(--color--white);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  transition: all var(--duration-fast) ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--color--lime);
+  box-shadow: 0 0 20px rgba(210, 255, 0, 0.25);
+  background: #151910;
+}
+
+.search-icon-svg {
+  position: absolute;
+  left: 1.1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color--lime);
+  pointer-events: none;
+}
+
+/* Grid of all 41 verified athletes */
+.athletes-full-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 2rem;
+}
+
+.athlete-card {
+  position: relative;
+  background: var(--color--dark-surface);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--duration-fast) var(--cubic-default);
+  cursor: pointer;
+}
+
+.athlete-card:hover {
+  border-color: var(--color--lime);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.85), 0 0 25px rgba(210, 255, 0, 0.2);
+}
+
+.athlete-card-media {
+  position: relative;
+  width: 100%;
+  height: 310px;
+  background: #0f120c;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.athlete-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform var(--duration-fast) var(--cubic-default);
+}
+
+.athlete-card:hover .athlete-card-img {
+  transform: scale(1.06);
+}
+
+.athlete-card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background: var(--color--dark-surface-elevated);
+  flex: 1;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.athlete-card-title {
+  font-family: var(--font-condensed);
+  font-size: 1.45rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color--white);
+  line-height: 1;
+}
+
+.athlete-card-meta {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color--lime);
+  text-transform: uppercase;
+}
+
+.athlete-card-earnings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.85rem;
+  background: rgba(210, 255, 0, 0.05);
+  border: 1px solid rgba(210, 255, 0, 0.15);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.athlete-card-earnings-val {
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--color--lime);
+  font-size: 0.95rem;
+}
+
+/* --------------------------------------------------------------------------
+   ATHLETE DOSSIER POPUP MODAL
+   -------------------------------------------------------------------------- */
+
+.athlete-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  z-index: 2500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--duration-fast) ease;
+}
+
+.athlete-modal-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.athlete-modal-card {
+  position: relative;
+  background: var(--color--dark-surface);
+  border: 1px solid var(--color--lime);
+  border-radius: var(--radius-md);
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.95), 0 0 50px rgba(210, 255, 0, 0.25);
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+}
+
+.athlete-modal-media {
+  background: #090c07;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+.athlete-modal-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.athlete-modal-info {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.athlete-modal-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.athlete-modal-name {
+  font-family: var(--font-condensed);
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--color--white);
+  line-height: 0.92;
+}
+
+.athlete-modal-role {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--color--lime);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.athlete-modal-earnings-box {
+  background: rgba(210, 255, 0, 0.08);
+  border: 1px solid var(--color--lime);
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.athlete-modal-bio {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--color--white-muted);
+}
+
+.athlete-modal-socials {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.athlete-social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--color--white);
+  transition: all var(--duration-fast) ease;
+}
+
+.athlete-social-btn:hover {
+  background: var(--color--lime);
+  color: var(--color--black);
+  border-color: var(--color--lime);
+}
+
+.athlete-modal-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--color--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 1.1rem;
+  transition: all var(--duration-fast) ease;
+}
+
+.athlete-modal-close:hover {
+  border-color: var(--color--lime);
+  color: var(--color--lime);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .athlete-modal-card {
+    grid-template-columns: 1fr;
+  }
+  .athlete-modal-media {
+    max-height: 320px;
+    min-height: auto;
+  }
+  .fan-deck-wrapper {
+    height: 440px;
+  }
+  .fan-card {
+    width: 200px;
+    height: 320px;
+  }
+  .fan-card[data-index="0"] { transform: translateX(-240px) translateY(35px) rotate(-18deg); }
+  .fan-card[data-index="1"] { transform: translateX(-160px) translateY(18px) rotate(-11deg); }
+  .fan-card[data-index="2"] { transform: translateX(-80px) translateY(5px) rotate(-5deg); }
+  .fan-card[data-index="4"] { transform: translateX(80px) translateY(5px) rotate(5deg); }
+  .fan-card[data-index="5"] { transform: translateX(160px) translateY(18px) rotate(11deg); }
+  .fan-card[data-index="6"] { transform: translateX(240px) translateY(35px) rotate(18deg); }
+}
+
+@media (max-width: 600px) {
+  .fan-deck-wrapper {
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 2rem 1rem;
+    height: 400px;
+    perspective: none;
+  }
+  .fan-card {
+    position: relative;
+    transform: none !important;
+    margin-right: -40px;
+    flex-shrink: 0;
+  }
+}
+
+/* ==========================================================================
+   OFF-STAGE (LN4 LIFESTYLE CREAM MODE) COMPATIBILITY
+   ========================================================================== */
+body[data-mode="off-stage"] .fan-deck-section {
+  background: radial-gradient(circle at 50% 30%, rgba(210, 255, 0, 0.18) 0%, #f4f3ed 75%);
+}
+
+body[data-mode="off-stage"] .fan-card {
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+body[data-mode="off-stage"] .fan-card:hover {
+  border-color: var(--color--lime);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2), 0 0 35px rgba(210, 255, 0, 0.45);
+}
+
+body[data-mode="off-stage"] .fan-card-name {
+  color: #ffffff;
+}
+
+body[data-mode="off-stage"] .directory-section {
+  background: #f0efe8;
+}
+
+body[data-mode="off-stage"] .directory-card {
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+body[data-mode="off-stage"] .directory-card-name {
+  color: #111111;
+}
+
+body[data-mode="off-stage"] .directory-search-input {
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.12);
+  color: #111111;
+}
+
+body[data-mode="off-stage"] .directory-filter-pill {
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.1);
+  color: #444444;
+}
+
+body[data-mode="off-stage"] .directory-filter-pill.active {
+  background: var(--color--lime);
+  color: #000000;
+  border-color: var(--color--lime);
+}
+
+body[data-mode="off-stage"] .athlete-modal-card {
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.12);
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.25);
+}
+
+body[data-mode="off-stage"] .athlete-modal-name {
+  color: #111111;
+}
+
+body[data-mode="off-stage"] .athlete-modal-bio {
+  color: #444444;
+}
+
+body[data-mode="off-stage"] .athlete-modal-earnings {
+  background: #f7f6f0;
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+body[data-mode="off-stage"] .athlete-modal-earnings-label {
+  color: #777777;
+}
+
+body[data-mode="off-stage"] .athlete-modal-close {
+  background: #f0efe8;
+  color: #111111;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+

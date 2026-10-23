@@ -19,7 +19,7 @@ This project scrapes the core identity, roster, tournament data, and philosophy 
 ## 🏆 Scraped & Integrated Content from 7ven.club
 
 - **Team Accolades**: FNCS Champions, MLB World Series Winners, NFL Pros, and film icons.
-- **Roster & Career Earnings**:
+- **Roster & Career Earnings**: 41 verified athletes, creators, and leaders including:
   - `7VEN Avivv` ($226,860 Career Earnings)
   - `7VEN GMONEY` ($57,550 Career Earnings)
   - `7VEN CRINGE` ($86,565 Career Earnings)
@@ -27,8 +27,10 @@ This project scrapes the core identity, roster, tournament data, and philosophy 
   - `7VEN Tyler Zuber` (MLB Pitcher / 7VEN Athlete)
   - `7VEN Blake Sciortino` (Film & Creative Lead)
   - `7VEN CECE` (Twitch Partner • Zero Build Champion • 60K+ TikTok)
+  - `7VEN Thorik` (FNCS Global Finalist & LAN Champion)
+  - `7VEN Sxhool` (FNCS Major 2 NA Champion • $54,400 Earnings)
   - Full leadership team (7VEN Jeff, 7VEN 60k60, 7VEN EMO, 7VEN CECXI, 7VEN ANXIOUS, 7VEN MORPH3US).
-- **Divisions**: Competitive Fortnite, VALORANT Stars, Rainbow Six Siege, Pokémon Unite, and Creators.
+- **Divisions**: Competitive Fortnite, VALORANT Stars, Rainbow Six Siege, Athletes & Sports, and Creators.
 
 ---
 
@@ -36,15 +38,21 @@ This project scrapes the core identity, roster, tournament data, and philosophy 
 
 ```
 7ven-club/
-├── index.html              # Core semantic HTML5 application
+├── index.html              # Main landing page with LN4 hero, vault, drop store, and roster preview
+├── athletes.html           # Dedicated Athletes & Players page with LN4 fan-out card deck & dossier modal
 ├── css/
 │   ├── variables.css       # LN4 color system, fluid clamps, timing curves
 │   ├── main.css            # Base resets, typography scale, buttons, overlays
-│   └── components.css      # Nav, Hero, Vault, Roster, Fixtures, Store, Cart, Footer
+│   ├── components.css      # Nav, Hero, Vault, Roster preview, Fixtures, Store, Cart, Footer
+│   └── athletes.css        # Fan-out arc deck, squircle cards, expansion, and dossier modal styles
 ├── js/
-│   └── main.js             # Web Audio SFX, dual-stage switcher, filters, cart logic
+│   ├── main.js             # Web Audio SFX, dual-stage switcher, filters, cart logic
+│   └── athletes.js         # Fan-out deck hover pusher, directory filter, search, dossier modal
 └── assets/
-    └── images/             # Scraped 7VEN logos + bespoke 3D gear renders
+    ├── roster_data.json    # Complete 41-member verified structured database
+    └── images/
+        ├── roster/         # 41 verified high-resolution portraits for each athlete
+        └── ...             # Brand assets, merch gear, and UI iconography
 ```
 
 ---
