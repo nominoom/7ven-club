@@ -39,11 +39,12 @@
   background: #11140e;
   border: 2px solid rgba(210, 255, 0, 0.16);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
-  transform-origin: center 120%;
-  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1),
-              box-shadow 0.5s ease,
-              border-color 0.4s ease,
+  transform-origin: 50% 50%;
+  transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.45s ease,
+              border-color 0.35s ease,
               filter 0.4s ease;
+  will-change: transform;
   user-select: none;
   display: flex;
   flex-direction: column;
@@ -140,27 +141,30 @@
 .fan-card[data-index="5"] { transform: translateX(230px) translateY(20px) rotate(14deg); z-index: 2; }
 .fan-card[data-index="6"] { transform: translateX(340px) translateY(42px) rotate(22deg); z-index: 1; }
 
-/* --- HOVER EXPANSION (LANDO NORRIS EXPANDING EFFECT) --- */
-.fan-deck-wrapper:hover .fan-card:not(:hover) {
-  filter: brightness(0.7) blur(0.5px);
+/* --- HOVER EXPANSION (LANDO NORRIS ORGANIC EXPANDING EFFECT) --- */
+.fan-deck-wrapper:hover .fan-card:not(.is-hovered) {
+  filter: brightness(0.72) contrast(0.95);
 }
 
+.fan-card.is-hovered,
 .fan-card:hover {
-  transform: scale(1.18) translateY(-40px) rotate(0deg) !important;
-  z-index: 30 !important;
+  z-index: 50 !important;
   border-color: var(--color--lime);
-  box-shadow: 0 35px 75px rgba(0, 0, 0, 0.95), 0 0 45px rgba(210, 255, 0, 0.45);
-  filter: brightness(1.05) !important;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 40px rgba(210, 255, 0, 0.4);
+  filter: brightness(1.08) !important;
 }
 
+.fan-card.is-hovered .fan-card-img,
 .fan-card:hover .fan-card-img {
-  transform: scale(1.08);
+  transform: scale(1.06);
 }
 
+.fan-card.is-hovered .fan-card-content,
 .fan-card:hover .fan-card-content {
   transform: translateY(0);
 }
 
+.fan-card.is-hovered .fan-card-hint,
 .fan-card:hover .fan-card-hint {
   opacity: 1;
   transform: translateY(0);

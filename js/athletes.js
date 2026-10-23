@@ -21,13 +21,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalBio = document.getElementById('modalAthleteBio');
   const modalSocials = document.getElementById('modalAthleteSocials');
 
-  // 1. Fetch Verified Athlete Data
+  // 1. Initialize Fan-Out Deck Interactions Immediately
+  initFanDeckInteractions();
+
+  // 2. Fetch Verified Athlete Data
   fetch('assets/roster_data.json')
     .then(res => res.json())
     .then(data => {
       athletes = data;
       renderGrid(athletes);
-      initFanDeckClicks();
     })
     .catch(err => {
       console.error('Failed to load roster data:', err);
@@ -117,47 +119,113 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 4. Fan-Out Deck Clicks & Adjacent Spreading
-  function initFanDeckClicks() {
-    const fanCards = document.querySelectorAll('.fan-card');
-    fanCards.forEach((card, index) => {
-      card.addEventListener('click', () => {
-        const slug = card.getAttribute('data-athlete-slug');
-        openAthleteModal(slug);
-      });
-
-      // Mouseenter and mouseleave dynamic spreading
-      card.addEventListener('mouseenter', () => {
-        fanCards.forEach((other, otherIdx) => {
-          if (otherIdx < index) {
-            // Push left
-            other.style.transform = getRestTransform(otherIdx, -35);
-          } else if (otherIdx > index) {
-            // Push right
-            other.style.transform = getRestTransform(otherIdx, 35);
-          }
-        });
-      });
-
-      card.addEventListener('mouseleave', () => {
-        fanCards.forEach((other, otherIdx) => {
-          other.style.transform = ''; // Reset to base CSS
-        });
-      });
-    });
+  // 4. Fan-Out Deck Interactions (Organic scale up + 10% lateral shift on neighbors)
+  function getBaseConfigs() {
+    const isMedium = window.innerWidth <= 900;
+    if (isMedium) {
+      return [
+        { x: -240, y: 35, rot: -18, scale: 0.90, zIndex: 1, shift: 36 },
+        { x: -160, y: 18, rot: -11, scale: 0.94, zIndex: 2, shift: 36 },
+        { x: -80,  y: 5,  rot: -5,  scale: 0.98, zIndex: 3, shift: 36 },
+        { x: 0,    y: 0,  rot: 0,   scale: 1.00, zIndex: 4, shift: 36 },
+        { x: 80,   y: 5,  rot: 5,   scale: 0.98, zIndex: 3, shift: 36 },
+        { x: 160,  y: 18, rot: 11,  scale: 0.94, zIndex: 2, shift: 36 },
+        { x: 240,  y: 35, rot: 18,  scale: 0.90, zIndex: 1, shift: 36 }
+      ];
+    }
+    return [
+      { x: -340, y: 42, rot: -22, scale: 0.90, zIndex: 1, shift: 48 },
+      { x: -230, y: 20, rot: -14, scale: 0.94, zIndex: 2, shift: 48 },
+      { x: -115, y: 6,  rot: -7,  scale: 0.98, zIndex: 3, shift: 48 },
+      { x: 0,    y: 0,  rot: 0,   scale: 1.00, zIndex: 4, shift: 48 },
+      { x: 115,  y: 6,  rot: 7,   scale: 0.98, zIndex: 3, shift: 48 },
+      { x: 230,  y: 20, rot: 14,  scale: 0.94, zIndex: 2, shift: 48 },
+      { x: 340,  y: 42, rot: 22,  scale: 0.90, zIndex: 1, shift: 48 }
+    ];
   }
 
-  function getRestTransform(index, offsetPx) {
-    const baseTransforms = [
-      `translateX(${ -340 + offsetPx }px) translateY(42px) rotate(-22deg)`,
-      `translateX(${ -230 + offsetPx }px) translateY(20px) rotate(-14deg)`,
-      `translateX(${ -115 + offsetPx }px) translateY(6px) rotate(-7deg)`,
-      `translateX(${ 0 + offsetPx }px) translateY(0px) rotate(0deg)`,
-      `translateX(${ 115 + offsetPx }px) translateY(6px) rotate(7deg)`,
-      `translateX(${ 230 + offsetPx }px) translateY(20px) rotate(14deg)`,
-      `translateX(${ 340 + offsetPx }px) translateY(42px) rotate(22deg)`
-    ];
-    return baseTransforms[index] || '';
+  function initFanDeckInteractions() {
+    const fanCards = Array.from(document.querySelectorAll('.fan-card'));
+    const deckWrapper = document.getElementById('fanDeckWrapper');
+    if (!fanCards.length) return;
+
+    let currentHovered = -1;
+
+    function applyHoverState(hoveredIdx) {
+      if (window.innerWidth <= 600) return; // Mobile horizontal scroll
+      const configs = getBaseConfigs();
+      currentHovered = hoveredIdx;
+
+      fanCards.forEach((card, idx) => {
+        const base = configs[idx];
+        if (!base) return;
+
+        if (hoveredIdx === -1) {
+          // Reset: natural arc positions from base CSS
+          card.classList.remove('is-hovered');
+          card.style.transform = '';
+          card.style.zIndex = '';
+        } else if (idx === hoveredIdx) {
+          // Hovered card: scale up a little (1.08x), lift along arc, stay at its X position
+          card.classList.add('is-hovered');
+          const scaleUp = (base.scale * 1.08).toFixed(3);
+          const liftY = base.y - 24;
+          const softRot = (base.rot * 0.45).toFixed(1);
+          card.style.transform = `translateX(${base.x}px) translateY(${liftY}px) rotate(${softRot}deg) scale(${scaleUp})`;
+          card.style.zIndex = '30';
+        } else if (idx < hoveredIdx) {
+          // Cards to the LEFT shift further away to the left by ~10% (48px)
+          card.classList.remove('is-hovered');
+          const shiftX = base.x - base.shift;
+          card.style.transform = `translateX(${shiftX}px) translateY(${base.y}px) rotate(${base.rot}deg) scale(${base.scale})`;
+          card.style.zIndex = String(base.zIndex);
+        } else {
+          // Cards to the RIGHT shift further away to the right by ~10% (48px)
+          card.classList.remove('is-hovered');
+          const shiftX = base.x + base.shift;
+          card.style.transform = `translateX(${shiftX}px) translateY(${base.y}px) rotate(${base.rot}deg) scale(${base.scale})`;
+          card.style.zIndex = String(base.zIndex);
+        }
+      });
+    }
+
+    fanCards.forEach((card, idx) => {
+      // Hover event
+      card.addEventListener('mouseenter', () => {
+        applyHoverState(idx);
+      });
+
+      card.addEventListener('mouseleave', (e) => {
+        // If moving directly into another fan-card, let that card handle it
+        if (e.relatedTarget && e.relatedTarget.closest('.fan-card')) {
+          return;
+        }
+        // If leaving cards entirely
+        if (!e.relatedTarget || !e.relatedTarget.closest('#fanDeckWrapper')) {
+          applyHoverState(-1);
+        }
+      });
+
+      // Click opens athlete modal
+      card.addEventListener('click', () => {
+        const slug = card.getAttribute('data-athlete-slug');
+        if (slug) openAthleteModal(slug);
+      });
+    });
+
+    if (deckWrapper) {
+      deckWrapper.addEventListener('mouseleave', () => {
+        applyHoverState(-1);
+      });
+    }
+
+    window.addEventListener('resize', () => {
+      if (currentHovered === -1) {
+        applyHoverState(-1);
+      } else {
+        applyHoverState(currentHovered);
+      }
+    });
   }
 
   // 5. Athlete Profile Modal Popup
