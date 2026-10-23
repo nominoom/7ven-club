@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/athletes.css">
 </head>
 <body data-mode="on-stage">
 
@@ -46,7 +47,7 @@
       <!-- Navigation Links -->
       <nav aria-label="Main Navigation">
         <ul class="ln-nav-links">
-          <li><a href="athletes.html" class="ln-nav-link">Athletes</a></li>
+          <li><a href="#roster" class="ln-nav-link">Athletes</a></li>
           <li><a href="#vault" class="ln-nav-link">The Vault</a></li>
           <li><a href="#calendar" class="ln-nav-link">Fixtures</a></li>
           <li><a href="#store" class="ln-nav-link">Drops</a></li>
@@ -331,221 +332,141 @@
     </section>
 
     <!-- --------------------------------------------------------------------------
-         5. ACTIVE ROSTER / HALL OF FAME (LANDO DRIVER CARDS STYLE)
+         5. CHAMPIONSHIP ROSTER SPOTLIGHT (LANDO NORRIS FAN-OUT CARD DECK)
          -------------------------------------------------------------------------- -->
-    <section class="roster-section" id="roster">
+    <section class="fan-deck-section" id="roster">
       <div class="container">
         
-        <div class="section-head">
-          <div class="section-head-row">
-            <div>
-              <span class="text-eyebrow">// 02 • ACTIVE ROSTER</span>
-              <h2 class="text-impact" style="margin-top: 0.5rem;">
-                THE <span class="highlight-lime">DRIVERS.</span>
-              </h2>
+        <div class="fan-deck-header">
+          <span class="text-eyebrow">// 02 • CHAMPIONSHIP ROSTER SPOTLIGHT</span>
+          <h2 class="text-impact" style="margin-top: 0.5rem; font-size: clamp(3rem, 7vw, 6.5rem);">
+            THE <span class="highlight-lime">7VEN TEAM.</span>
+          </h2>
+          <p class="text-lead" style="max-width: 680px; margin: 1rem auto 0 auto;">
+            Hover to expand among the deck. Click any card to open their complete operational dossier, tournament earnings, and verified social channels.
+          </p>
+        </div>
+
+        <!-- Overlapping Fan-Out Card Deck -->
+        <div class="fan-deck-wrapper" id="fanDeckWrapper">
+          
+          <!-- Card 0: 7VEN Avivv -->
+          <div class="fan-card" data-index="0" data-athlete-slug="avivv">
+            <div class="fan-card-img-wrap">
+              <img src="assets/images/roster/avivv.jpg" alt="7VEN Avivv" class="fan-card-img">
+              <div class="fan-card-vignette"></div>
             </div>
-            <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.75rem;">
-              <p class="text-lead" style="max-width: 480px; text-align: right;">
-                Champions built to thrive under extreme pressure. Every member plays a critical operational role.
-              </p>
-              <a href="athletes.html" class="btn-ln btn-ln-primary" style="padding: 0.65rem 1.4rem; font-size: 0.8rem;">
-                <span class="btn-roll-text" data-text="OPEN ATHLETES PAGE →">
-                  <span>OPEN ATHLETES PAGE →</span>
-                </span>
-              </a>
+            <span class="badge-pill is-live fan-card-badge">FNCS PRO</span>
+            <div class="fan-card-content">
+              <span class="fan-card-role">NA-CENTRAL</span>
+              <h3 class="fan-card-name">7VEN AVIVV</h3>
+              <div class="fan-card-earnings">$226,860 EARNED</div>
+              <span class="fan-card-hint">CLICK TO EXPAND DOSSIER →</span>
             </div>
           </div>
+
+          <!-- Card 1: 7VEN Tyler Zuber (MLB PRO, No purse) -->
+          <div class="fan-card" data-index="1" data-athlete-slug="tyler-zuber">
+            <div class="fan-card-img-wrap">
+              <img src="assets/images/roster/tyler-zuber.jpg" alt="7VEN Tyler Zuber" class="fan-card-img">
+              <div class="fan-card-vignette"></div>
+            </div>
+            <span class="badge-pill fan-card-badge">MLB PRO</span>
+            <div class="fan-card-content">
+              <span class="fan-card-role">MAJOR LEAGUE</span>
+              <h3 class="fan-card-name">TYLER ZUBER</h3>
+              <span class="fan-card-hint">CLICK TO EXPAND DOSSIER →</span>
+            </div>
+          </div>
+
+          <!-- Card 2: 7VEN GMONEY -->
+          <div class="fan-card" data-index="2" data-athlete-slug="gmoney">
+            <div class="fan-card-img-wrap">
+              <img src="assets/images/roster/gmoney.jpg" alt="7VEN GMONEY" class="fan-card-img">
+              <div class="fan-card-vignette"></div>
+            </div>
+            <span class="badge-pill is-live fan-card-badge">FNCS PRO</span>
+            <div class="fan-card-content">
+              <span class="fan-card-role">NA-CENTRAL</span>
+              <h3 class="fan-card-name">7VEN GMONEY</h3>
+              <div class="fan-card-earnings">$57,550 EARNED</div>
+              <span class="fan-card-hint">CLICK TO EXPAND DOSSIER →</span>
+            </div>
+          </div>
+
+          <!-- Card 3: 7VEN CRINGE (Center) -->
+          <div class="fan-card" data-index="3" data-athlete-slug="cringe">
+            <div class="fan-card-img-wrap">
+              <img src="assets/images/roster/cringe.jpg" alt="7VEN CRINGE" class="fan-card-img">
+              <div class="fan-card-vignette"></div>
+            </div>
+            <span class="badge-pill is-live fan-card-badge">EU GRAND FINALIST</span>
+            <div class="fan-card-content">
+              <span class="fan-card-role">EUROPE</span>
+              <h3 class="fan-card-name">7VEN CRINGE</h3>
+              <div class="fan-card-earnings">$86,565 EARNED</div>
+              <span class="fan-card-hint">CLICK TO EXPAND DOSSIER →</span>
+            </div>
+          </div>
+
+          <!-- Card 4: 7VEN CECE -->
+          <div class="fan-card" data-index="4" data-athlete-slug="cece">
+            <div class="fan-card-img-wrap">
+              <img src="assets/images/roster/cece.jpg" alt="7VEN CECE" class="fan-card-img">
+              <div class="fan-card-vignette"></div>
+            </div>
+            <span class="badge-pill fan-card-badge">TWITCH PARTNER</span>
+            <div class="fan-card-content">
+              <span class="fan-card-role">ZERO BUILD PRO</span>
+              <h3 class="fan-card-name">7VEN CECE</h3>
+              <div class="fan-card-earnings">$20,000+ EARNED</div>
+              <span class="fan-card-hint">CLICK TO EXPAND DOSSIER →</span>
+            </div>
+          </div>
+
+          <!-- Card 5: 7VEN Thorik -->
+          <div class="fan-card" data-index="5" data-athlete-slug="thorik">
+            <div class="fan-card-img-wrap">
+              <img src="assets/images/roster/thorik.jpg" alt="7VEN Thorik" class="fan-card-img">
+              <div class="fan-card-vignette"></div>
+            </div>
+            <span class="badge-pill is-live fan-card-badge">FNCS CHAMPION</span>
+            <div class="fan-card-content">
+              <span class="fan-card-role">NA WEST // GLOBAL</span>
+              <h3 class="fan-card-name">7VEN THORIK</h3>
+              <div class="fan-card-earnings">$31,000+ EARNED</div>
+              <span class="fan-card-hint">CLICK TO EXPAND DOSSIER →</span>
+            </div>
+          </div>
+
+          <!-- Card 6: 7VEN Sxhool -->
+          <div class="fan-card" data-index="6" data-athlete-slug="sxhool">
+            <div class="fan-card-img-wrap">
+              <img src="assets/images/roster/sxhool.jpg" alt="7VEN Sxhool" class="fan-card-img">
+              <div class="fan-card-vignette"></div>
+            </div>
+            <span class="badge-pill is-live fan-card-badge">FNCS CHAMPION</span>
+            <div class="fan-card-content">
+              <span class="fan-card-role">MAJOR 2 CHAMPION</span>
+              <h3 class="fan-card-name">7VEN SXHOOL</h3>
+              <div class="fan-card-earnings">$54,400 EARNED</div>
+              <span class="fan-card-hint">CLICK TO EXPAND DOSSIER →</span>
+            </div>
+          </div>
+
         </div>
 
-        <!-- Filter Controls -->
-        <div class="roster-filter-bar" role="tablist" aria-label="Roster Filter">
-          <button class="roster-filter-btn active" data-filter="all">All Divisions [32]</button>
-          <button class="roster-filter-btn" data-filter="fortnite">Fortnite [FNCS]</button>
-          <button class="roster-filter-btn" data-filter="valorant">VALORANT Stars</button>
-          <button class="roster-filter-btn" data-filter="r6">R6 Siege Pro</button>
-          <button class="roster-filter-btn" data-filter="pokemon">Pokémon Unite</button>
-          <button class="roster-filter-btn" data-filter="creators">Athletes & Icons</button>
-        </div>
-
-        <!-- Player Cards Grid -->
-        <div class="roster-grid">
-          
-          <!-- Player 1: 7VEN Avivv -->
-          <article class="player-card" data-category="fortnite all" id="playerAvivv">
-            <div class="player-card-media">
-              <span class="badge-pill is-live player-overlay-badge">FNCS PRO</span>
-              <span class="player-region-tag">NA-C</span>
-              <img src="assets/images/roster/avivv.jpg" alt="7VEN Avivv" class="player-photo">
-            </div>
-            <div class="player-card-body">
-              <div>
-                <h3 class="player-callsign">7VEN AVIVV</h3>
-                <span class="player-role-sub">NORTH AMERICA CENTRAL // FORTNITE</span>
-              </div>
-              <div class="player-earnings-row">
-                <span class="earnings-label">CAREER EARNINGS</span>
-                <span class="earnings-amount">$226,860</span>
-              </div>
-              <p class="player-bio-snippet">
-                Championship powerhouse dominating NA-Central leaderboards. Pinnacle clutch specialist in end-game FNCS storm circles.
-              </p>
-            </div>
-          </article>
-
-          <!-- Player 2: 7VEN GMONEY -->
-          <article class="player-card" data-category="fortnite all" id="playerGmoney">
-            <div class="player-card-media">
-              <span class="badge-pill is-live player-overlay-badge">FNCS PRO</span>
-              <span class="player-region-tag">NA-C</span>
-              <img src="assets/images/roster/gmoney.jpg" alt="7VEN GMONEY" class="player-photo">
-            </div>
-            <div class="player-card-body">
-              <div>
-                <h3 class="player-callsign">7VEN GMONEY</h3>
-                <span class="player-role-sub">COMPETITIVE STAGE // FORTNITE</span>
-              </div>
-              <div class="player-earnings-row">
-                <span class="earnings-label">CAREER EARNINGS</span>
-                <span class="earnings-amount">$57,550</span>
-              </div>
-              <p class="player-bio-snippet">
-                High-kill frag specialist with proven consistency across major competitive cups and LAN showdowns.
-              </p>
-            </div>
-          </article>
-
-          <!-- Player 3: 7VEN Tyler Zuber (MLB Crossover) -->
-          <article class="player-card" data-category="creators all" id="playerZuber">
-            <div class="player-card-media">
-              <span class="badge-pill player-overlay-badge">MLB WORLD SERIES</span>
-              <span class="player-region-tag">USA</span>
-              <img src="assets/images/roster/tyler-zuber.jpg" alt="7VEN Tyler Zuber" class="player-photo">
-            </div>
-            <div class="player-card-body">
-              <div>
-                <h3 class="player-callsign">7VEN TYLER ZUBER</h3>
-                <span class="player-role-sub">PRO MLB PITCHER // 7VEN ATHLETE</span>
-              </div>
-              <div class="player-earnings-row">
-                <span class="earnings-label">ATHLETE DIVISION</span>
-                <span class="earnings-amount">PRO LEAGUE</span>
-              </div>
-              <p class="player-bio-snippet">
-                Major League Baseball relief pitcher bringing elite professional sports discipline into the 7VEN arena.
-              </p>
-            </div>
-          </article>
-
-          <!-- Player 4: 7VEN Blake Sciortino -->
-          <article class="player-card" data-category="creators all" id="playerBlake">
-            <div class="player-card-media">
-              <span class="badge-pill player-overlay-badge">VIP AMBASSADOR</span>
-              <span class="player-region-tag">USA</span>
-              <img src="assets/images/roster/blake-sciortino.jpg" alt="7VEN Blake Sciortino" class="player-photo">
-            </div>
-            <div class="player-card-body">
-              <div>
-                <h3 class="player-callsign">7VEN BLAKE SCIORTINO</h3>
-                <span class="player-role-sub">FILM & CULTURE ICON</span>
-              </div>
-              <div class="player-earnings-row">
-                <span class="earnings-label">DIVISION</span>
-                <span class="earnings-amount">CREATIVE LEAD</span>
-              </div>
-              <p class="player-bio-snippet">
-                Actor, model (Adidas & Under Armour) spearheading 7VEN’s film and lifestyle cinema direction.
-              </p>
-            </div>
-          </article>
-
-          <!-- Player 5: 7VEN CRINGE -->
-          <article class="player-card" data-category="fortnite all" id="playerCringe">
-            <div class="player-card-media">
-              <span class="badge-pill is-live player-overlay-badge">EUROPE FNCS</span>
-              <span class="player-region-tag">EU</span>
-              <img src="assets/images/roster/cringe.jpg" alt="7VEN Cringe" class="player-photo">
-            </div>
-            <div class="player-card-body">
-              <div>
-                <h3 class="player-callsign">7VEN CRINGE</h3>
-                <span class="player-role-sub">EUROPEAN LEAGUE // FORTNITE</span>
-              </div>
-              <div class="player-earnings-row">
-                <span class="earnings-label">CAREER EARNINGS</span>
-                <span class="earnings-amount">$86,565</span>
-              </div>
-              <p class="player-bio-snippet">
-                European competitive juggernaut renowned across EU Grand Finals for fearless mechanical dominance.
-              </p>
-            </div>
-          </article>
-
-          <!-- Player 6: 7VEN SEVEN -->
-          <article class="player-card" data-category="fortnite all" id="playerSeven">
-            <div class="player-card-media">
-              <span class="badge-pill is-live player-overlay-badge">BRAZIL FNCS</span>
-              <span class="player-region-tag">BR</span>
-              <img src="assets/images/roster/seven.jpg" alt="7VEN Seven" class="player-photo">
-            </div>
-            <div class="player-card-body">
-              <div>
-                <h3 class="player-callsign">7VEN SEVEN</h3>
-                <span class="player-role-sub">BRAZIL DIVISION // FORTNITE</span>
-              </div>
-              <div class="player-earnings-row">
-                <span class="earnings-label">CAREER EARNINGS</span>
-                <span class="earnings-amount">$13,990</span>
-              </div>
-              <p class="player-bio-snippet">
-                South American sensation carrying the iconic namesake jersey into international championship brackets.
-              </p>
-            </div>
-          </article>
-
-          <!-- Player 7: 7VEN THORIK -->
-          <article class="player-card" data-category="fortnite all" id="playerThorik">
-            <div class="player-card-media">
-              <span class="badge-pill is-live player-overlay-badge">FNCS CHAMPION</span>
-              <span class="player-region-tag">NA-W</span>
-              <img src="assets/images/roster/thorik.jpg" alt="7VEN Thorik" class="player-photo">
-            </div>
-            <div class="player-card-body">
-              <div>
-                <h3 class="player-callsign">7VEN THORIK</h3>
-                <span class="player-role-sub">FNCS MAJOR 1 WINNER</span>
-              </div>
-              <div class="player-earnings-row">
-                <span class="earnings-label">CAREER EARNINGS</span>
-                <span class="earnings-amount">$31,000+</span>
-              </div>
-              <p class="player-bio-snippet">
-                FNCS Major 1 Champion, Copenhagen Global Finals finalist bringing international championship pedigree.
-              </p>
-            </div>
-          </article>
-
-          <!-- Player 8: 7VEN CECE (Content & Twitch) -->
-          <article class="player-card" data-category="creators all" id="playerCece">
-            <div class="player-card-media">
-              <span class="badge-pill player-overlay-badge">TWITCH PARTNER</span>
-              <span class="player-region-tag">60K+ TIKTOK</span>
-              <img src="assets/images/roster/cece.jpg" alt="7VEN CECE" class="player-photo">
-            </div>
-            <div class="player-card-body">
-              <div>
-                <h3 class="player-callsign">7VEN CECE</h3>
-                <span class="player-role-sub">TWITCH PARTNER • ZERO BUILD</span>
-              </div>
-              <div class="player-earnings-row">
-                <span class="earnings-label">COMPETITIVE EARNINGS</span>
-                <span class="earnings-amount">$20,000+</span>
-              </div>
-              <p class="player-bio-snippet">
-                Elite competitor and creator, Milk Cup Major winner with an established multi-platform community.
-              </p>
-            </div>
-          </article>
-
+        <!-- Action CTA linking to full Athletes directory -->
+        <div style="text-align: center; margin-top: 3.5rem;">
+          <a href="athletes.html" class="btn-ln btn-ln-primary" style="padding: 0.85rem 2.2rem; font-size: 0.88rem;">
+            <span class="btn-roll-text" data-text="EXPLORE ALL 41 ATHLETES & LEADERS →">
+              <span>EXPLORE ALL 41 ATHLETES & LEADERS →</span>
+            </span>
+            <svg class="btn-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
         </div>
 
       </div>
@@ -1020,14 +941,48 @@
   </div>
 
   <!-- --------------------------------------------------------------------------
-       13. HUD TOAST NOTIFICATION
+       14. ATHLETE POPUP DOSSIER MODAL
        -------------------------------------------------------------------------- -->
-  <div class="toast-hud" id="hudToast" role="status" aria-live="polite">
-    <span class="live-dot"></span>
-    <span class="toast-text">7VEN TELEMETRY ONLINE</span>
+  <div class="athlete-modal-overlay" id="athleteModal" role="dialog" aria-label="Athlete Profile Dossier">
+    <div class="athlete-modal-card">
+      <button class="athlete-modal-close" id="athleteModalClose" aria-label="Close Dossier">✕</button>
+      
+      <div class="athlete-modal-media">
+        <img src="assets/images/roster/avivv.jpg" alt="Athlete Portrait" id="modalAthleteImg" class="athlete-modal-img">
+      </div>
+
+      <div class="athlete-modal-info">
+        <div class="athlete-modal-header">
+          <span class="badge-pill is-live" id="modalAthleteBadge">VERIFIED ROSTER</span>
+          <h2 class="athlete-modal-name" id="modalAthleteName">7VEN AVIVV</h2>
+          <div class="athlete-modal-role" id="modalAthleteRole">NORTH AMERICA CENTRAL // FORTNITE</div>
+        </div>
+
+        <div class="athlete-modal-earnings-box" id="modalEarningsBox">
+          <span class="text-mono" style="font-size: 0.8rem; color: var(--color--grey-on-track);">CAREER TOURNAMENT EARNINGS</span>
+          <span class="text-h3" id="modalAthleteEarnings" style="color: var(--color--lime); font-size: 1.5rem;">$226,860</span>
+        </div>
+
+        <div>
+          <span class="text-eyebrow" style="font-size: 0.65rem; margin-bottom: 0.5rem; display: block;">OPERATIONAL DOSSIER</span>
+          <p class="athlete-modal-bio" id="modalAthleteBio">
+            Championship powerhouse dominating NA-Central leaderboards. Pinnacle clutch specialist in end-game FNCS storm circles.
+          </p>
+        </div>
+
+        <div>
+          <span class="text-eyebrow" style="font-size: 0.65rem; margin-bottom: 0.5rem; display: block;">VERIFIED CHANNELS</span>
+          <div class="athlete-modal-socials" id="modalAthleteSocials">
+            <!-- Rendered dynamically -->
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 
   <!-- Scripts -->
   <script src="js/main.js"></script>
+  <script src="js/athletes.js"></script>
 </body>
 </html>
